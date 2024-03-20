@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
 
 /* Reset CSS */
 body {
   margin: 0;
   padding: 0;
-  border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navigation Bar CSS */
@@ -17,7 +18,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #3AAEBD;
+  background-color: #3aaebd;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,13 +50,13 @@ nav ul li a {
   font-size: 30px;
   font-family: "Agbalumo", system-ui;
 }
-nav ul li img{
-    filter: invert(100%);
-    width: 50px;
+nav ul li img {
+  filter: invert(100%);
+  width: 50px;
 }
-nav ul li img:hover{
-    cursor: pointer;
-    filter: invert(0%);
+nav ul li img:hover {
+  cursor: pointer;
+  filter: invert(0%);
 }
 
 nav ul li a:hover {
@@ -64,24 +65,20 @@ nav ul li a:hover {
 
 /* Main CSS */
 
-.banner img{
-    width: 100%;
+.banner img {
+  width: 100%;
 }
-
-
-
-
 
 /* FOOOTER CSS */
 footer {
-    background-color: #3AAEBD;
-    color: #fff;
-    text-align: center;
-    position: fixed; 
-    bottom: 0; 
-    width: 100%; 
+  background-color: #3aaebd;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; 
 }
-footer p{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
+footer p {
+  margin: 10px 0px 10px 0px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
 }
