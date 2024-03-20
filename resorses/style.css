@@ -13,11 +13,11 @@ body {
 /* Navigation Bar CSS */
 
 nav {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(89, 215, 250);
+  background-color: #3AAEBD;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,6 +49,14 @@ nav ul li a {
   font-size: 30px;
   font-family: "Agbalumo", system-ui;
 }
+nav ul li img{
+    filter: invert(100%);
+    width: 50px;
+}
+nav ul li img:hover{
+    cursor: pointer;
+    filter: invert(0%);
+}
 
 nav ul li a:hover {
   color: black;
@@ -56,13 +64,17 @@ nav ul li a:hover {
 
 /* Main CSS */
 
+.banner img{
+    width: 100%;
+}
+
 
 
 
 
 /* FOOOTER CSS */
 footer {
-    background-color: rgb(89, 215, 250);
+    background-color: #3AAEBD;
     color: #fff;
     text-align: center;
     position: fixed; 
