@@ -1,16 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
 
 /* Reset CSS */
-body {
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+ol,
+li,
+table,
+tr,
+th,
+td {
   margin: 0;
   padding: 0;
+  border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  display: flex;
-  flex-direction: column;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Agbalumo", system-ui;
+}
 /* Navigation Bar CSS */
 
 nav {
@@ -69,16 +95,26 @@ nav ul li a:hover {
   width: 100%;
 }
 
+.popular-games {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popular-games h2 {
+  font-size: 100px;
+}
+
 /* FOOOTER CSS */
 footer {
   background-color: #3aaebd;
   color: #fff;
   text-align: center;
   width: 100%;
-  margin-top: auto; 
+  margin-top: auto;
 }
 footer p {
-  margin: 10px 0px 10px 0px;
   color: rgb(255, 255, 255);
   font-size: 20px;
 }
