@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap");
+
+/* RESET */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+ol,
+li,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* BASIC CSS */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,label {
+  font-family: "Agbalumo", system-ui;
+}
+p {
+  font-family: "Bevan", serif;
+}
+
+body {
+  background-image: url("./images/BANNER_form.png");
+  background-size: cover;
+}
+
+.form_el p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,label {
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 2px 0 #fff,
+    1px 1px 0 #fff;
+  color: black;
+}
+.form_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.form_content img {
+  padding-top: 150px;
+  width: 600px;
+  /* filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1)); */
+}
+
+.form_data {
+  padding: 100px 300px 100px 100px;
+
+}
+
+
+.form_data label{
+    font-size: 50px;
+}
+
+
+.form_data h2{
+    font-size: 70px;
+}
+
+form input,select,textarea{
+    font-size: 50px;
+    border-radius: 10px;
+}
