@@ -101,6 +101,7 @@ nav ul li a:hover {
   background-size: 40%;
 }
 
+
 .main p,
 h1,
 h2,
@@ -108,9 +109,9 @@ h3,
 h4,
 h5,
 h6 {
-  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff,
-    2px 2px 0 #fff;
-    
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 2px 0 #fff,
+    1px 1px 0 #fff;
+    color: #3aaebd;
 }
 
 /* baner */
@@ -131,7 +132,6 @@ h6 {
 }
 .popular-games-title p {
   font-size: 30px;
-  
 }
 
 /* popular games row */
@@ -170,7 +170,7 @@ h6 {
 }
 
 .other-games-row li {
-  margin: 10px;
+  margin: 30px;
   text-align: center;
 }
 
@@ -196,6 +196,5 @@ footer {
   margin-top: auto;
 }
 footer p {
-  color: rgb(255, 255, 255);
   font-size: 20px;
 }
