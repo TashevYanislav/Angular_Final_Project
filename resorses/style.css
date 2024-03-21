@@ -41,6 +41,7 @@ h6 {
 p {
   font-family: "Bevan", serif;
 }
+
 /* Navigation Bar CSS */
 
 nav {
@@ -93,27 +94,49 @@ nav ul li a:hover {
   color: black;
 }
 
-/* Main CSS */
+/* MAIN CSS */
+.main {
+  background-image: url("./images/BackGroud.png");
+  background-size: contain;
+  background-size: 40%;
+}
 
+.main p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+    
+}
+
+/* baner */
 .banner img {
   width: 100%;
 }
 
-.popular-games {
+/* popular games title */
+.popular-games-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.popular-games h2 {
+.popular-games-title h2 {
   font-size: 100px;
 }
-.popular-games p {
+.popular-games-title p {
   font-size: 30px;
+  
 }
 
-.games-row {
+/* popular games row */
+
+.popular-games-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -121,20 +144,47 @@ nav ul li a:hover {
   list-style: none;
 }
 
-.games-row li {
+.popular-games-row li {
   margin: 10px;
   text-align: center;
 }
 
-.games-row li img{
+.popular-games-row li img {
   width: 400px;
   height: 600px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 1); 
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 1);
   margin-bottom: 30px;
   transition: transform 0.5s ease;
 }
-.games-row li img:hover{
-    transform: scale(1.03);
+.popular-games-row li img:hover {
+  transform: scale(1.03);
+}
+
+/* other games row */
+.other-games-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.other-games-row li {
+  margin: 10px;
+  text-align: center;
+}
+
+.other-games-row li img {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 1);
+  margin-bottom: 30px;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+  object-position: center top;
+}
+.other-games-row li img:hover {
+  transform: scale(1.03);
 }
 
 /* FOOOTER CSS */
