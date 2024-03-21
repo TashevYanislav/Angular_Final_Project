@@ -37,7 +37,8 @@ h2,
 h3,
 h4,
 h5,
-h6,label {
+h6,
+label {
   font-family: "Agbalumo", system-ui;
 }
 p {
@@ -55,7 +56,8 @@ h2,
 h3,
 h4,
 h5,
-h6,label {
+h6,
+label {
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 2px 0 #fff,
     1px 1px 0 #fff;
   color: black;
@@ -74,21 +76,39 @@ h6,label {
 }
 
 .form_data {
-  padding: 100px 300px 100px 100px;
-
+  padding: 100px 300px 10px 200px;
 }
 
-
-.form_data label{
-    font-size: 50px;
+.form_data label {
+  font-size: 50px;
 }
 
-
-.form_data h2{
-    font-size: 70px;
+.form_data h2 {
+  font-size: 70px;
 }
 
-form input,select,textarea{
-    font-size: 50px;
-    border-radius: 10px;
+form input,
+select,
+textarea {
+  font-size: 30px;
+  border-radius: 10px;
+  font-family: "Bevan", serif;
+  margin-bottom: 10px;
 }
+
+form {
+  padding-top: 50px;
+}
+
+.button {
+  border: 5px solid white;
+  border-radius: 20px;
+  background-color: #3aaebd;
+  color: white;
+}
+
+.button:hover {
+    border: 5px solid white;
+    background-color: white;
+    color: #3aaebd;
+  }

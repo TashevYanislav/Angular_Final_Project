@@ -10,26 +10,27 @@
     <div class="form_el">
       <div class="form_content">
         <div class="form_data">
-          <h2>ADD YOURS</h2>
+          <h2>ADD YOUR GAME
+          </h2>
           <form action="/submit-form" method="post">
-            <label for="game_name">Game Name</label><br />
+            <label for="game_name">Game Name:</label><br />
             <input type="text" id="game_name" name="game_name" placeholder="Assassin's Creed..." /><br />
 
             <div>
-              <label for="condition">Condition</label><br />
+              <label for="condition">Condition:</label><br />
               <select id="condition" name="condition">
                 <option value="new">New</option>
                 <option value="used">Used</option>
               </select>
             </div>
 
-            <label for="description">Description</label ><br />
+            <label for="description">Description:</label ><br />
             <textarea id="description" name="description" placeholder="The best game..."></textarea><br />
 
-            <label for="price">Price</label><br />
+            <label for="price">Price:</label><br />
             <input type="number" id="price" name="price" placeholder="$.$$..."/><br />
 
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" class="button"/>
           </form>
         </div>
         <img src="./images/Logo nav.png" alt="" />
