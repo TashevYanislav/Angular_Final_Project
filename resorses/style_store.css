@@ -92,3 +92,81 @@ body {
   color:white;
   font-size: 30px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.other-games-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.other-games-row li {
+  margin: 30px;
+  text-align: center;
+}
+
+.other-games-row li img {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 1);
+  margin-bottom: 30px;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+  object-position: center top;
+}
+.other-games-row li img:hover {
+  transform: scale(1.03);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  font-family: "Agbalumo", system-ui;
+}
+p {
+  font-family: "Bevan", serif;
+}
+
+
+
+.store_title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 2px 0 #fff,
+    1px 1px 0 #fff;
+}
+
+.store_title h2{
+  font-size: 70px;
+}
