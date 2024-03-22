@@ -96,9 +96,8 @@ nav ul li a:hover {
 
 /* MAIN CSS */
 .main {
-  background-image: url("./images/BackGroud.png");
+  background-image: url("./images/BackGroud.png"); 
   background-size: contain;
-  background-size: 40%;
 }
 
 
@@ -109,9 +108,10 @@ h3,
 h4,
 h5,
 h6 {
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 2px 0 #fff,
-    1px 1px 0 #fff;
-    color: #3aaebd;
+  /* text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 2px 0 #fff,
+    1px 1px 0 #fff; */
+    color: #000000;
+    font-size: 20px;
 }
 
 /* baner */

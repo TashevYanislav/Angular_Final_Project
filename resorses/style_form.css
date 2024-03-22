@@ -47,7 +47,7 @@ p {
 
 body {
   background-image: url("./images/BANNER_form.png");
-  background-size: cover;
+  background-size:cover;
 }
 
 .form_el p,
@@ -58,9 +58,9 @@ h4,
 h5,
 h6,
 label {
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 2px 0 #fff,
-    1px 1px 0 #fff;
-  color: black;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 4px 0 #000, 2px 2px 0 #000;
+
+  color: white;
 }
 .form_content {
   display: flex;
@@ -71,7 +71,7 @@ label {
 
 .form_content img {
   padding-top: 150px;
-  width: 600px;
+  width: 800px;
   /* filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1)); */
 }
 
@@ -94,21 +94,23 @@ textarea {
   border-radius: 10px;
   font-family: "Bevan", serif;
   margin-bottom: 10px;
+  border: 4px solid black;
 }
 
-form {
-  padding-top: 50px;
+select {
+  cursor: pointer;
 }
 
 .button {
-  border: 5px solid white;
+  border: 5px solid rgb(0, 0, 0);
   border-radius: 20px;
   background-color: #3aaebd;
-  color: white;
+  color: rgb(255, 255, 255);
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 4px 0 #000, 2px 2px 0 #000;
 }
-
 .button:hover {
     border: 5px solid white;
-    background-color: white;
-    color: #3aaebd;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 4px 0 #ffffff, 2px 2px 0 #ffffff;
+    color: #000000;
+    cursor: pointer;
   }
