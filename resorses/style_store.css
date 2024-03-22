@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap");
+
 html,
 body,
 div,
@@ -26,12 +29,66 @@ td {
   vertical-align: baseline;
 }
 
-
-.body{
-    background-image: url("./images/BackGroud.png");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  font-family: "Agbalumo", system-ui;
+}
+p {
+  font-family: "Bevan", serif;
 }
 
+body {
+  background-image: url("./images/Store_Background.png");
+}
 
-.banner img{
-    width: 100%;
+.banner img {
+  width: 100%;
+}
+
+.search_container {
+  display: flex;
+  justify-content: center;
+}
+
+.search_panel {
+  display: flex;
+  border-radius: 10px;
+}
+
+.search_panel div {
+  margin: 0px 20px;
+  cursor: pointer;
+  color: white;
+}
+.search_panel div {
+  font-size: 30px;
+}
+.search_panel div:hover {
+  color: black;
+}
+.search_panel {
+  background-color: rgba(10, 2, 34, 0.4);
+}
+
+.search_panel input {
+  font-size: 30px;
+  font-family: "Bevan", serif;
+  background-color: rgba(10, 2, 34, 0.4);
+  border-radius: 10px;
+  border: none;
+}
+
+.search_panel button {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color:rgba(10, 2, 34,0.4);
+  color:white;
+  font-size: 30px;
 }
