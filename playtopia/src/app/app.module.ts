@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { MainComponent } from './main/main.component';
 import { StoreComponent } from './store/store.component';
+import { AddGameComponent } from './add-game/add-game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    StoreComponent ],
+    StoreComponent,
+    AddGameComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
