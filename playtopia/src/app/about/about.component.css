@@ -1,0 +1,47 @@
+body {
+  background-image: url("../../assets/BackGroud.png");
+}
+
+main {
+  position: relative;
+}
+
+.about_container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.about_container img {
+  width: 700px;
+  margin: 80px 100px 100px 200px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+}
+
+.about_container div {
+  margin: 250px 100px 100px 0px;
+  font-size: 25px;
+  position: relative;
+}
+
+.article {
+  display: flex;
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 50.4%; /* Adjust as needed */
+  transform: translateX(-41%);
+  z-index: 1;
+  font-size: 200px; /* No space between 100 and px */
+  color: white; /* Ensuring text is visible */
+}
+
+.article :first-child {
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 4px 0 #000,
+    2px 2px 0 #000;
+}
+
+.article :nth-child(2) {
+  color: black;
+  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 4px 0 #fff,
+    2px 2px 0 #fff;
+}
