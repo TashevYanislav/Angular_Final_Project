@@ -9,6 +9,7 @@ import { StoreComponent } from './store/store.component';
 import { AddGameComponent } from './add-game/add-game.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RegisterComponent } from './register/register.component';
     StoreComponent,
     AddGameComponent,
     AboutComponent,
-    RegisterComponent ],
+    RegisterComponent,
+    LoginComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
