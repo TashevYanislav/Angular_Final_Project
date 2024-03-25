@@ -10,7 +10,7 @@ import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
   // {path:"",pathMatch:"full" , redirectTo: "/home"},
-  { path: 'home', component: MainComponent },
+  { path: '', component: MainComponent },
   { path: 'store', component: StoreComponent },
   { path: 'add_game', component: AddGameComponent },
   { path: 'about', component: AboutComponent },

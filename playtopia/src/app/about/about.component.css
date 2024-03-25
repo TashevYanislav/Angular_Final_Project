@@ -28,8 +28,8 @@ main {
   display: flex;
   position: absolute;
   top: 10px; /* Adjust as needed */
-  left: 50.4%; /* Adjust as needed */
-  transform: translateX(-41%);
+  left: 50.8%; /* Adjust as needed */
+  transform: translateX(-35%);
   z-index: 1;
   font-size: 200px; /* No space between 100 and px */
   color: white; /* Ensuring text is visible */

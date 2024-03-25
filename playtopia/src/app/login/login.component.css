@@ -78,3 +78,17 @@ label {
   color: #000000;
   cursor: pointer;
 }
+
+p {
+  font-size: 30px;
+  color: white;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 4px 0 #000,
+    2px 2px 0 #000;
+}
+
+#register_p:hover {
+  text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 4px 0 #ffffff,
+    2px 2px 0 #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
