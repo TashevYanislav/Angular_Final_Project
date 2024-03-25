@@ -1,0 +1,60 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  background-image: url("../../assets/BackGroud.png");
+}
+
+main {
+  display: flex;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 2px 0 #fff,
+    1px 1px 0 #fff;
+  color: #000000;
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+
+.image img {
+  width: 550px;
+  margin: 80px 100px 100px 200px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+}
+
+.description {
+  margin: 70px 100px 100px 0px;
+  font-size: 35px;
+  width: 900px;
+}
+
+button {
+  margin-top: 50px;
+  font-size: 40px;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  background-color: #3c5d61;
+  color: rgb(255, 255, 255);
+  font-family: "Bevan", serif;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 4px 0 #000,
+    2px 2px 0 #000;
+}
+
+button:hover {
+  border: 5px solid white;
+  text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 4px 0 #ffffff,
+    2px 2px 0 #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+
+
+

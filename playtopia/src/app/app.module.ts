@@ -10,6 +10,7 @@ import { AddGameComponent } from './add-game/add-game.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoginComponent } from './login/login.component';
     AddGameComponent,
     AboutComponent,
     RegisterComponent,
-    LoginComponent ],
+    LoginComponent,
+    DetailComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
