@@ -8,6 +8,7 @@ import { MainComponent } from './main/main.component';
 import { StoreComponent } from './store/store.component';
 import { AddGameComponent } from './add-game/add-game.component';
 import { AboutComponent } from './about/about.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AboutComponent } from './about/about.component';
     MainComponent,
     StoreComponent,
     AddGameComponent,
-    AboutComponent ],
+    AboutComponent,
+    RegisterComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
