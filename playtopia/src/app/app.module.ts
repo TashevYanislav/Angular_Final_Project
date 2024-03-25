@@ -21,13 +21,10 @@ import { DetailComponent } from './detail/detail.component';
     AboutComponent,
     RegisterComponent,
     LoginComponent,
-    DetailComponent ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CoreModule
+    DetailComponent,
   ],
+  imports: [BrowserModule, AppRoutingModule, CoreModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
