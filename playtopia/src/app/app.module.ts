@@ -10,9 +10,10 @@ import { UserModule } from './user/user.module';
 import { UserRoutingModule } from './user/user-router.module';
 import { GameModule } from './game/game.module';
 import { GameRoutingModule } from './game/game-routing.module';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, AboutComponent],
+  declarations: [AppComponent, MainComponent, AboutComponent, ErrorComponent],
   imports: [
     BrowserModule,
     UserModule,
