@@ -5,25 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { MainComponent } from './main/main.component';
-import { StoreComponent } from './store/store.component';
-import { AddGameComponent } from './add-game/add-game.component';
 import { AboutComponent } from './about/about.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { DetailComponent } from './detail/detail.component';
+import { UserModule } from './user/user.module';
+import { UserRoutingModule } from './user/user-router.module';
+import { GameModule } from './game/game.module';
+import { GameRoutingModule } from './game/game-routing.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainComponent,
-    StoreComponent,
-    AddGameComponent,
-    AboutComponent,
-    RegisterComponent,
-    LoginComponent,
-    DetailComponent,
+  declarations: [AppComponent, MainComponent, AboutComponent],
+  imports: [
+    BrowserModule,
+    UserModule,
+    CoreModule,
+    GameModule,
+    UserRoutingModule,
+    GameRoutingModule,
+    AppRoutingModule,
   ],
-  imports: [BrowserModule, AppRoutingModule, CoreModule],
   providers: [],
   bootstrap: [AppComponent],
 })
