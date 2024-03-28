@@ -17,17 +17,17 @@ export class RegisterComponent {
       username: username,
       email: email,
       password: password,
-      repassword: repassword,
     };
 
     if (password !== repassword) {
       console.log("Passwords don't match");
+      form.reset();
       return;
     }
 
     if (form.invalid) {
       console.log('Form Invalid');
-
+      form.reset();
       return;
     }
     console.log(form.value);
