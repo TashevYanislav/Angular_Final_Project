@@ -5,39 +5,57 @@
         <img src="../../../assets/Register_page.jpg" alt="register_image" />
       </div>
       <div class="form_el">
-        <form action="">
+        <form #loginForm="ngForm" (ngSubmit)="formSubmitHandler(loginForm)">
           <label for="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="gamer123..."
-          />
+          <div class="form-group">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="gamer123..."
+              ngModel
+            />
+          </div>
 
           <label for="email">Email:</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="email@pmail..."
-          />
+          <div class="form-group">
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="email@pmail..."
+              ngModel
+              required
+              email
+              #emailInput="ngModel"
+            />
+          </div>
 
           <label for="password">Password:</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="*****"
-          />
+          <div class="form-group">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="*****"
+              ngModel
+              #passwordInput="ngModel"
+            />
+          </div>
 
           <label for="re_password">Repeat Password:</label>
-          <input
-            type="password"
-            name="re_password"
-            id="re_password"
-            placeholder="*****"
-          />
-          <input type="submit" value="Register" id="button" />
+          <div class="form-group">
+            <input
+              type="password"
+              name="repassword"
+              id="repassword"
+              placeholder="*****"
+              ngModel
+              #repasswordInput="ngModel"
+            />
+          </div>
+
+          <button id="button">Register</button>
         </form>
         <p>Already have an account ?</p>
         <p id="login_p" routerLink="/login">Login !</p>
