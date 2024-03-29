@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserService } from '../user.service';
-import { UserData } from 'src/app/types/user';
+import { RegisterData } from 'src/app/types/user';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +13,7 @@ export class RegisterComponent {
 
   formSubmitHandler(form: NgForm) {
     const { username, email, password, repassword } = form.value;
-    const data: UserData = {
+    const data: RegisterData = {
       username: username,
       email: email,
       password: password,
