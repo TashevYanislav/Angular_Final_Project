@@ -4,14 +4,16 @@
       <div class="image-el">
         <img src="../../../assets/Register_page.jpg" alt="register_image" />
       </div>
-      <div class="form_el">
-        <form action="">
-          <label for="username">Username:</label>
+      <div class="form_el" >
+        <form #LoginForm="ngForm" (ngSubmit)="formSubmitHandler(LoginForm)">
+          <label for="Email">Email:</label>
           <input
             type="text"
-            id="username"
-            name="username"
-            placeholder="gamer123..."
+            id="email"
+            name="email"
+            placeholder="email@pmail..."
+            ngModel
+            #emailInput="ngModel"
           />
 
           <label for="password">Password:</label>
@@ -20,8 +22,10 @@
             name="password"
             id="password"
             placeholder="*****"
+            ngModel
+            #passwordInput="ngModel"
           />
-          <input type="submit" value="Login" id="button" />
+          <button>Login</button>
         </form>
         <p>Don't have an account ?</p>
         <p id="register_p" routerLink="/register">Register !</p>

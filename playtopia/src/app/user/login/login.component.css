@@ -61,9 +61,10 @@ label {
   color: white;
 }
 
-#button {
+button {
   margin-top: 20px;
-
+  font-size: 40px;
+  margin-bottom: 20px;
   border: 5px solid rgb(0, 0, 0);
   border-radius: 20px;
   background-color: #3c5d61;
@@ -71,7 +72,7 @@ label {
   text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 4px 0 #000,
     2px 2px 0 #000;
 }
-#button:hover {
+button:hover {
   border: 5px solid white;
   text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 4px 0 #ffffff,
     2px 2px 0 #ffffff;
