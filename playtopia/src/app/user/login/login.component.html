@@ -4,7 +4,7 @@
       <div class="image-el">
         <img src="../../../assets/Register_page.jpg" alt="register_image" />
       </div>
-      <div class="form_el" >
+      <div class="form_el">
         <form #LoginForm="ngForm" (ngSubmit)="formSubmitHandler(LoginForm)">
           <label for="Email">Email:</label>
           <input
@@ -14,7 +14,14 @@
             placeholder="email@pmail..."
             ngModel
             #emailInput="ngModel"
+            required
           />
+
+          <ng-container *ngIf="emailInput.touched">
+            <p class="error" *ngIf="emailInput.errors?.['required']">
+              Email is required
+            </p>
+          </ng-container>
 
           <label for="password">Password:</label>
           <input
@@ -24,7 +31,14 @@
             placeholder="*****"
             ngModel
             #passwordInput="ngModel"
+            required
           />
+          <ng-container *ngIf="passwordInput.touched">
+            <p class="error" *ngIf="passwordInput.errors?.['required']">
+              Password is required
+            </p>
+          </ng-container>
+
           <button>Login</button>
         </form>
         <p>Don't have an account ?</p>
