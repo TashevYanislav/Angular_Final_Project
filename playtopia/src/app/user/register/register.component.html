@@ -5,57 +5,99 @@
         <img src="../../../assets/Register_page.jpg" alt="register_image" />
       </div>
       <div class="form_el">
-        <form #RegisterForm="ngForm" (ngSubmit)="formSubmitHandler(RegisterForm)">
+        <form [formGroup]="registerForm" (ngSubmit)="formSubmitHandler()">
           <label for="username">Username:</label>
-          <div class="form-group">
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="gamer123..."
-              ngModel
-              #usernameInput="ngModel"
-            />
-          </div>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="gamer123..."
+            formControlName="username"
+          />
+          <ng-container *ngIf="registerForm.get('username')?.touched">
+            <p
+              class="error"
+              *ngIf="registerForm.get('username')?.errors?.['required']"
+            >
+              Username is required
+            </p>
+            <p
+              class="error"
+              *ngIf="registerForm.get('username')?.errors?.['minlength']"
+            >
+              Username must be at least 5 symbols!
+            </p>
+          </ng-container>
 
           <label for="email">Email:</label>
-          <div class="form-group">
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="email@pmail..."
-              ngModel
-              required
-              email
-              #emailInput="ngModel"
-            />
-          </div>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="email@pmail..."
+            formControlName="email"
+          />
 
-          <label for="password">Password:</label>
-          <div class="form-group">
+          <ng-container *ngIf="registerForm.get('email')?.touched">
+            <p
+              class="error"
+              *ngIf="registerForm.get('email')?.errors?.['required']"
+            >
+              Email is required
+            </p>
+            <p
+              class="error"
+              *ngIf="registerForm.get('email')?.errors?.['emailValidator']"
+            >
+              Invalid email format!
+            </p>
+          </ng-container>
+
+          <ng-container formGroupName="passGroup">
+            <label for="password">Password:</label>
             <input
               type="password"
               name="password"
               id="password"
               placeholder="*****"
-              ngModel
-              #passwordInput="ngModel"
+              formControlName="password"
             />
-          </div>
+            <ng-container
+              *ngIf="registerForm.get('passGroup')?.get('password')?.touched"
+            >
+              <p
+                class="error"
+                *ngIf="registerForm.get('passGroup')?.get('password')?.errors?.['required'];"
+              >
+                Password is required
+              </p>
+            </ng-container>
 
-          <label for="re_password">Repeat Password:</label>
-          <div class="form-group">
+            <label for="re_password">Repeat Password:</label>
             <input
               type="password"
-              name="repassword"
-              id="repassword"
+              name="re_password"
+              id="re_password"
               placeholder="*****"
-              ngModel
-              #repasswordInput="ngModel"
+              formControlName="re_password"
             />
-          </div>
-
+            <ng-container
+              *ngIf="registerForm.get('passGroup')?.get('re_password')?.touched"
+            >
+              <p
+                class="error"
+                *ngIf="registerForm.get('passGroup')?.get('re_password')?.errors?.['required'];"
+              >
+                Repeat Password is required
+              </p>
+              <p
+                class="error"
+                *ngIf="registerForm.get('passGroup')?.errors?.['matchPasswordsValidator']"
+              >
+                Passwords does not match!
+              </p>
+            </ng-container>
+          </ng-container>
           <button id="button">Register</button>
         </form>
         <p>Already have an account ?</p>
