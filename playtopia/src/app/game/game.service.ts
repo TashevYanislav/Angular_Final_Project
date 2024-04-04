@@ -29,10 +29,17 @@ export class GameService {
       .subscribe();
     this.router.navigate(['/store']);
   }
-  deleteGame() {} 
+  deleteGame() {}
   editGame() {}
   getAllGames() {
     return this.http.get(`${this.URL}/games`, this.httpOptions);
   }
   getCurrentGame() {}
+
+  getLatestFiveGames() {
+    return this.http.get(
+      `${this.URL}/games?sortBy=_createdOn desc&pageSize=5`,
+      this.httpOptions
+    );
+  }
 }
