@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class GameService {
-  URL: string = 'http://localhost:3030/data/:collection';
+  URL: string = 'http://localhost:3030/data';
   token = localStorage.getItem('token');
   httpOptionsAuth = {
     headers: new HttpHeaders({
@@ -24,13 +24,15 @@ export class GameService {
   constructor(private http: HttpClient, private router: Router) {}
 
   addGame(formValue: gameForm) {
-    this.http.post(this.URL, formValue, this.httpOptionsAuth).subscribe();
+    this.http
+      .post(`${this.URL}/games`, formValue, this.httpOptionsAuth)
+      .subscribe();
     this.router.navigate(['/store']);
   }
-  deleteGame() {}
+  deleteGame() {} 
   editGame() {}
   getAllGames() {
-    return this.http.get(this.URL, this.httpOptions);
+    return this.http.get(`${this.URL}/games`, this.httpOptions);
   }
   getCurrentGame() {}
 }
