@@ -1,44 +1,83 @@
 <body>
-    <div class="form_el">
-      <div class="form_content">
-        <div class="form_data">
-          <h2>ADD YOUR GAME</h2>
-          <form action="/submit-form" method="post">
-            <label for="game_name">Game Name:</label><br />
-            <input
-              type="text"
-              id="game_name"
-              name="game_name"
-              placeholder="Assassin's Creed..."
-            /><br />
+  <div class="form_el">
+    <div class="form_content">
+      <div class="form_data">
+        <h2>ADD YOUR GAME</h2>
+        <form #GameForm="ngForm" (ngSubmit)="formSubmitHandler(GameForm)">
+          <label for="game_name">Game Name:</label><br />
+          <input
+            type="text"
+            id="game_name"
+            name="game_name"
+            placeholder="Assassin's Creed..."
+            ngModel
+            #gameNameInput="ngModel"
+            required
+            maxlength="30"
+          /><br />
 
-            <label for="description">Description:</label><br />
-            <textarea
-              id="description"
-              name="description"
-              placeholder="The best game..."
-            ></textarea
-            ><br />
-            <label for="genre">Genre:</label><br />
-            <input
-              type="text"
-              id="genre"
-              name="genre"
-              placeholder="Action..."
-            /><br />
+          <ng-container *ngIf="gameNameInput.touched">
+            <p class="error" *ngIf="gameNameInput.errors?.['required']">
+              Game Name is required!
+            </p>
+          </ng-container>
 
-            <label for="price">Price:</label><br />
-            <input
-              type="number"
-              id="price"
-              name="price"
-              placeholder="$.$$..."
-            /><br />
+          <label for="description">Description:</label><br />
+          <textarea
+            id="description"
+            name="description"
+            placeholder="The best game..."
+            ngModel
+            #descriptionInput="ngModel"
+            required
+            maxlength="100"
+          ></textarea
+          ><br />
 
-            <input type="submit" value="Submit" class="button" />
-          </form>
-        </div>
-        <img src="../../../assets/Logo nav.png" alt="" />
+          <ng-container *ngIf="descriptionInput.touched">
+            <p class="error" *ngIf="descriptionInput.errors?.['required']">
+              Description is required!
+            </p>
+          </ng-container>
+
+          <label for="genre">Genre:</label><br />
+          <input
+            type="text"
+            id="genre"
+            name="genre"
+            placeholder="Action..."
+            ngModel
+            #genreInput="ngModel"
+            required
+          /><br />
+
+          <ng-container *ngIf="genreInput.touched">
+            <p class="error" *ngIf="genreInput.errors?.['required']">
+              Genre is required!
+            </p>
+          </ng-container>
+
+          <label for="price">Price:</label><br />
+          <input
+            type="number"
+            id="price"
+            name="price"
+            placeholder="$.$$..."
+            ngModel
+            #priceInput="ngModel"
+            required
+          /><br />
+
+          <ng-container *ngIf="priceInput.touched">
+            <p class="error" *ngIf="priceInput.errors?.['required']">
+              Price is required!
+            </p>
+          </ng-container>
+
+          <input type="submit" value="Submit" class="button" />
+        </form>
       </div>
+      <img src="../../../assets/Logo nav.png" alt="" />
     </div>
-  </body>
+  </div>
+</body>

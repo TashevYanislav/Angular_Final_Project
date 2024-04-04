@@ -4,9 +4,10 @@ import { AddGameComponent } from './add-game/add-game.component';
 import { DetailComponent } from './detail/detail.component';
 import { StoreComponent } from './store/store.component';
 import { GameRoutingModule } from './game-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AddGameComponent, DetailComponent, StoreComponent],
-  imports: [CommonModule, GameRoutingModule],
+  imports: [CommonModule, GameRoutingModule,FormsModule],
 })
 export class GameModule {}
