@@ -6,7 +6,9 @@
   </div>
   <ul class="right-items">
     <li><a routerLink="/store">Store</a></li>
-    <li><a routerLink="/add_game">Add Game</a></li>
+    <li *ngIf="userService.isLogedin()">
+      <a routerLink="/add_game">Add Game</a>
+    </li>
     <li><a routerLink="/about">About</a></li>
     <li>
       <div *ngIf="!userService.isLogedin()">
