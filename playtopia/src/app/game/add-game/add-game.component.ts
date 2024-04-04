@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { GameService } from '../game.service';
 
 @Component({
   selector: 'app-add-game',
@@ -7,7 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./add-game.component.css'],
 })
 export class AddGameComponent {
-  constructor() {}
+  constructor(private gameService: GameService) {}
 
   formSubmitHandler(form: NgForm) {
     if (form.invalid) {
@@ -17,6 +18,6 @@ export class AddGameComponent {
     }
     console.log(form.value);
 
-    const { game_name, description, genre, price } = form.value;
+    this.gameService.addGame(form.value);
   }
 }

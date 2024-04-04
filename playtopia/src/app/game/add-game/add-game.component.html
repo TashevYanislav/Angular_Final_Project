@@ -22,6 +22,23 @@
             </p>
           </ng-container>
 
+          <label for="game_img">Game Image:</label><br />
+          <input
+            type="text"
+            id="game_img"
+            name="game_img"
+            placeholder="Assassin's Creed..."
+            ngModel
+            #gameImgInput="ngModel"
+            required
+          /><br />
+
+          <ng-container *ngIf="gameImgInput.touched">
+            <p class="error" *ngIf="gameImgInput.errors?.['required']">
+              Game Image is required!
+            </p>
+          </ng-container>
+
           <label for="description">Description:</label><br />
           <textarea
             id="description"
