@@ -4,7 +4,14 @@ export interface RegisterData {
   password: string;
 }
 
+export interface onRegisterData {
+  username: string;
+  email: string;
+  password: string;
+  accessToken: string;
+}
+
 export interface LoginData {
-  email:string;
+  email: string;
   password: string;
 }

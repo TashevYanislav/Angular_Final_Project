@@ -12,17 +12,17 @@ export class LoginComponent {
   constructor(private userService: UserService) {}
 
   formSubmitHandler(form: NgForm) {
+    if (form.invalid) {
+      console.log('Form Invalid');
+      form.reset();
+      return;
+    }
     const { email, password } = form.value;
     const data: LoginData = {
       email: email,
       password: password,
     };
 
-    if (form.invalid) {
-      console.log('Form Invalid');
-      form.reset();
-      return;
-    }
     console.log(form.value);
 
     this.userService.login(data);
