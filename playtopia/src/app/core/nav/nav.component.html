@@ -9,11 +9,14 @@
     <li><a routerLink="/add_game">Add Game</a></li>
     <li><a routerLink="/about">About</a></li>
     <li>
-      <div>
+      <div *ngIf="!userService.isLogedin()">
         <a routerLink="/register">
           <img src="../../../assets/Profile Img nav.png" alt="Profile" />
         </a>
       </div>
+    </li>
+    <li>
+      <a *ngIf="userService.isLogedin()" (click)="logoutHandler()">Logout</a>
     </li>
   </ul>
 </nav>
