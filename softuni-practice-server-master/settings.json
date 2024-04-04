@@ -21,6 +21,116 @@
         "sessions": {}
     },
     "seedData": {
+        "games": {
+            "9798b529-7788-43af-ad5f-653f8f070f99": {
+                "_ownerId": "49c4efe0-087d-4e97-a4b1-ba80b4560680",
+                "game_name": "Nier: Automata",
+                "game_img": "https://gameday.bg/wp-content/uploads/2020/11/nier-automata-goty-pc-01.jpg",
+                "description": "Nier: Automata is an action role-playing game set in a post-apocalyptic world where you play as androids, battling against machines in a war for Earth. It offers a compelling narrative, stunning visuals, and a mix of hack-and-slash combat and RPG elements, exploring themes of humanity, identity, and existentialism.",
+                "genre": "Action",
+                "price": 20,
+                "_createdOn": 1712248122038
+            },
+            "de004a91-a599-4dd1-91af-a63d82c039f9": {
+                "_ownerId": "49c4efe0-087d-4e97-a4b1-ba80b4560680",
+                "game_name": "Horizon Forbidden West",
+                "game_img": "https://blog.playstation.com/uploads/2024/01/bb4d6dc48cb2b4613432dfc197c0081a26474c2c.jpeg",
+                "description": "Horizon Forbidden West is an action RPG by Guerrilla Games, featuring Aloy in a post-apocalyptic world filled with robotic creatures. With stunning visuals, dynamic combat, and vast open-world exploration, players uncover the mysteries of the Forbidden West.",
+                "genre": "Action",
+                "price": 60,
+                "_createdOn": 1712248518995
+            },
+            "a210ccbe-8cdd-41f6-b9e9-5953d4221bcf": {
+                "_ownerId": "49c4efe0-087d-4e97-a4b1-ba80b4560680",
+                "game_name": "Uncharted 4: A Thief's End",
+                "game_img": "https://s3.amazonaws.com/prod-media.gameinformer.com/styles/product_box_art/s3/2018/07/26/a87590d4/uncharted4.jpg",
+                "description": "Uncharted 4: A Thief's End is an action-adventure game developed by Naughty Dog. Players follow Nathan Drake, a retired treasure hunter, as he embarks on one final adventure to find the pirate colony of Libertalia. The game features stunning visuals, thrilling set pieces, and compelling storytelling. It combines exploration, puzzle-solving, and third-person shooter mechanics.",
+                "genre": "Adventure",
+                "price": 25,
+                "_createdOn": 1712248790702
+            },
+            "ef9ac6d0-a3bc-46a7-927d-2ca59950df62": {
+                "_ownerId": "fa0783be-76e9-47e7-93d3-427c859f6191",
+                "game_name": "Stray",
+                "game_img": "https://cdn-products.eneba.com/resized-products/onCZHtTMHdDpMNrmElj1znlk5aTAhFB24dBfS4nXLd4_350x200_3x-0.jpg",
+                "description": "Stray is an adventure game developed by BlueTwelve Studio. Players take on the role of a stray cat navigating a mysterious neon-lit city inhabited by robots. The game promises exploration, puzzle-solving, and a unique perspective on urban life.",
+                "genre": "Adventure ",
+                "price": 29.99,
+                "_createdOn": 1712249402452
+            },
+            "7137ae54-e252-41d4-938f-43972fec9050": {
+                "_ownerId": "e40d0515-0eb5-405d-9c46-f7fd1259ad1e",
+                "game_name": "Left 4 Dead",
+                "game_img": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Left4Dead_Windows_cover.jpg/220px-Left4Dead_Windows_cover.jpg",
+                "description": "\"Left 4 Dead\" is a cooperative first-person shooter game developed by Valve Corporation. Set in a post-apocalyptic world overrun by zombies, players team up to fight their way through hordes of infected while completing objectives. The game emphasizes teamwork and strategic gameplay as players navigate various environments, scavenge for resources, and fend off waves of enemies.",
+                "genre": "Horror",
+                "price": 10,
+                "_createdOn": 1712249829165
+            },
+            "2f9cffeb-1207-4b1c-8e88-66ae1a371ac6": {
+                "_ownerId": "e40d0515-0eb5-405d-9c46-f7fd1259ad1e",
+                "game_name": "Outlast 2",
+                "game_img": "https://m.media-amazon.com/images/M/MV5BZjRhZTg2NzAtNGI3Yi00MWJmLTk3N2YtODY3NGU3YmQyZjkzXkEyXkFqcGdeQXVyMjM5NzU3OTM@._V1_QL75_UX190_CR0,4,190,281_.jpg",
+                "description": "\"Outlast 2\" is a survival horror game developed by Red Barrels. Players assume the role of investigative journalist Blake Langermann, who, along with his wife Lynn, ventures into the Arizona desert to uncover the truth behind the murder of a pregnant woman. The game features intense, atmospheric gameplay where players must navigate through hostile environments, evade enemies, and solve puzzles whi",
+                "genre": "Horror",
+                "price": 30,
+                "_createdOn": 1712249979089
+            },
+            "e24ab457-f774-47e3-9e4a-d8c759edf97c": {
+                "_ownerId": "dcb798b7-4b3c-47fc-894f-4b08e0adc911",
+                "game_name": "Portal",
+                "game_img": "https://upload.wikimedia.org/wikipedia/en/9/9f/Portal_standalonebox.jpg",
+                "description": "\"Portal\" is a puzzle-platform game developed by Valve Corporation. Players control a character equipped with a \"portal gun,\" which creates inter-spatial portals on flat surfaces. Through these portals, players must navigate through a series of test chambers while solving puzzles and overcoming obstacles. The game is known for its innovative gameplay mechanics, dark humor, and compelling narrative.",
+                "genre": "Puzzle",
+                "price": 15,
+                "_createdOn": 1712250183473
+            },
+            "48d5396f-96c8-443c-b671-86df417f80e0": {
+                "_ownerId": "dcb798b7-4b3c-47fc-894f-4b08e0adc911",
+                "game_name": "The Room: Old Sins",
+                "game_img": "https://upload.wikimedia.org/wikipedia/en/3/34/Room_Old_sins_logo.png",
+                "description": "\n\"The Room: Old Sins\" is a puzzle-adventure game developed by Fireproof Games. Players explore a mysterious dollhouse filled with intricate puzzles, hidden objects, and secrets to uncover. As they delve deeper into the story, they unravel the mysteries surrounding the disappearance of an ambitious engineer and his wife. The game features stunning graphics, immersive atmosphere, and challenging puz",
+                "genre": "Puzzle",
+                "price": 4.99,
+                "_createdOn": 1712250346776
+            },
+            "ed3c1ce3-794b-419d-bf8d-c21a2181ec5b": {
+                "_ownerId": "eed55395-ac4f-45a9-a4f1-20bdaad121b2",
+                "game_name": "Age of Empires II",
+                "game_img": "https://upload.wikimedia.org/wikipedia/en/5/56/Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png",
+                "description": "\"Age of Empires II\" is a real-time strategy game developed by Ensemble Studios and published by Microsoft. Players build and manage civilizations from the Dark Ages through the Imperial Age, constructing buildings, training armies, and engaging in battles. The game offers single-player campaigns, skirmishes against AI opponents, and multiplayer matches.",
+                "genre": "Strategy ",
+                "price": 19.99,
+                "_createdOn": 1712250688080
+            },
+            "3630d253-0e3d-4488-9350-8942dcb3a1a8": {
+                "_ownerId": "ce4e8bcd-d8e0-45ac-8ba8-36086506206d",
+                "game_name": "Crusader Kings III",
+                "game_img": "https://mgames.ua/upload/catalog_products/images/big_bb5824f645b928db7a9f3efa029f167bf4fe92151622718534.jpg",
+                "description": "\"Crusader Kings III\" is a grand strategy game developed by Paradox Development Studio. Players control a medieval dynasty, guiding its members through various challenges such as politics, warfare, and diplomacy. The game offers deep role-playing elements, allowing players to shape their characters' personalities, traits, and ambitions.",
+                "genre": "Strategy",
+                "price": 49.99,
+                "_createdOn": 1712251160117
+            },
+            "67f5e19e-5563-4d04-a3da-fae405b9c87b": {
+                "_ownerId": "ce4e8bcd-d8e0-45ac-8ba8-36086506206d",
+                "game_name": "FIFA 18",
+                "game_img": "https://assets-prd.ignimgs.com/2022/03/14/fifa18-1647223500828.jpg",
+                "description": "\"FIFA 18\" is a football simulation video game developed and published by Electronic Arts as part of the FIFA series. It features various game modes including single-player campaign, online multiplayer, and local multiplayer. Players can control teams from various leagues and compete in matches with realistic gameplay mechanics.",
+                "genre": "Sports",
+                "price": 15,
+                "_createdOn": 1712251794223
+            },
+            "5cdabaef-3a89-4f10-b59a-32b74053a261": {
+                "_ownerId": "ce4e8bcd-d8e0-45ac-8ba8-36086506206d",
+                "game_name": "NBA 2K24",
+                "game_img": "https://assets.2k.com/1a6ngf98576c/5t04D5mFfV3elCp3yiK7Jr/0aa12cf6a654cfa17657f85542a44757/N24-WEB-FRANCHISE_PAGE-GAME_TILE-MODULE_2-828x828-WHITE_BORDER-RESIZE.jpg",
+                "description": "\"NBA 2K24\" is a basketball simulation video game developed by Visual Concepts and published by 2K Sports. Released in September 2019, it is part of the long-running NBA 2K series. The game features realistic gameplay mechanics, extensive player customization options, and various game modes.",
+                "genre": "Sports",
+                "price": 19.99,
+                "_createdOn": 1712251995750
+            }
+        },
         "recipes": {
             "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
