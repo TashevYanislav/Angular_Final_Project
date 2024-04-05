@@ -54,7 +54,7 @@
                 "game_name": "Stray",
                 "game_img": "https://cdn-products.eneba.com/resized-products/onCZHtTMHdDpMNrmElj1znlk5aTAhFB24dBfS4nXLd4_350x200_3x-0.jpg",
                 "description": "Stray is an adventure game developed by BlueTwelve Studio. Players take on the role of a stray cat navigating a mysterious neon-lit city inhabited by robots. The game promises exploration, puzzle-solving, and a unique perspective on urban life.",
-                "genre": "Adventure ",
+                "genre": "Adventure",
                 "price": 29.99,
                 "_createdOn": 1712249402452
             },
@@ -81,7 +81,7 @@
                 "game_name": "Portal",
                 "game_img": "https://upload.wikimedia.org/wikipedia/en/9/9f/Portal_standalonebox.jpg",
                 "description": "\"Portal\" is a puzzle-platform game developed by Valve Corporation. Players control a character equipped with a \"portal gun,\" which creates inter-spatial portals on flat surfaces. Through these portals, players must navigate through a series of test chambers while solving puzzles and overcoming obstacles. The game is known for its innovative gameplay mechanics, dark humor, and compelling narrative.",
-                "genre": "Puzzle",
+                "genre": "Puzzles",
                 "price": 15,
                 "_createdOn": 1712250183473
             },
@@ -90,7 +90,7 @@
                 "game_name": "The Room: Old Sins",
                 "game_img": "https://upload.wikimedia.org/wikipedia/en/3/34/Room_Old_sins_logo.png",
                 "description": "\n\"The Room: Old Sins\" is a puzzle-adventure game developed by Fireproof Games. Players explore a mysterious dollhouse filled with intricate puzzles, hidden objects, and secrets to uncover. As they delve deeper into the story, they unravel the mysteries surrounding the disappearance of an ambitious engineer and his wife. The game features stunning graphics, immersive atmosphere, and challenging puz",
-                "genre": "Puzzle",
+                "genre": "Puzzles",
                 "price": 4.99,
                 "_createdOn": 1712250346776
             },
@@ -99,7 +99,7 @@
                 "game_name": "Age of Empires II",
                 "game_img": "https://upload.wikimedia.org/wikipedia/en/5/56/Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png",
                 "description": "\"Age of Empires II\" is a real-time strategy game developed by Ensemble Studios and published by Microsoft. Players build and manage civilizations from the Dark Ages through the Imperial Age, constructing buildings, training armies, and engaging in battles. The game offers single-player campaigns, skirmishes against AI opponents, and multiplayer matches.",
-                "genre": "Strategy ",
+                "genre": "Strategy",
                 "price": 19.99,
                 "_createdOn": 1712250688080
             },
