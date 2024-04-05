@@ -20,4 +20,16 @@ export class StoreComponent implements OnInit {
       }
     );
   }
+
+  getGameByGenreHandler(genre: string) {
+    this.games = []; // Clear the games array
+    this.gameService.getGamesByGenre(genre).subscribe(
+      (data: any) => {
+        this.games = data;
+      },
+      (error) => {
+        console.error('Error occurred while fetching games by genre:', error);
+      }
+    );
+  }
 }
