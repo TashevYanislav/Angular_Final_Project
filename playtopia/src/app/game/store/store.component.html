@@ -6,22 +6,52 @@
     <div class="search_container">
       <div class="search_panel">
         <div>
-          <p>Action</p>
+          <p
+            #genreAction
+            (click)="getGameByGenreHandler(genreAction.innerText)"
+          >
+            Action
+          </p>
         </div>
         <div>
-          <p>Adventure</p>
+          <p
+            #genreAdventure
+            (click)="getGameByGenreHandler(genreAdventure.innerText)"
+          >
+            Adventure
+          </p>
         </div>
         <div>
-          <p>Horror</p>
+          <p
+            #genreHorror
+            (click)="getGameByGenreHandler(genreHorror.innerText)"
+          >
+            Horror
+          </p>
         </div>
         <div>
-          <p>Puzzles</p>
+          <p
+            #genrePuzzles
+            (click)="getGameByGenreHandler(genrePuzzles.innerText)"
+          >
+            Puzzles
+          </p>
         </div>
         <div>
-          <p>Strategy</p>
+          <p
+            #genreStrategy
+            (click)="getGameByGenreHandler(genreStrategy.innerText)"
+          >
+            Strategy
+          </p>
         </div>
         <div>
-          <p>Sports</p>
+          <p
+            #genreSports
+            (click)="getGameByGenreHandler(genreSports.innerText)"
+          >
+            Sports
+          </p>
         </div>
         <div class="search_bar">
           <input type="text" placeholder="Search..." />
