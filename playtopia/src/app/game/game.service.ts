@@ -42,4 +42,8 @@ export class GameService {
       this.httpOptions
     );
   }
+
+  getGamesByGenre(genre: string) {
+    return this.http.get(`${this.URL}/games?where=genre%3D%22${genre}%22`);
+  }
 }
