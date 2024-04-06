@@ -8,7 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [LoginComponent, RegisterComponent],
-  imports: [CommonModule, UserRoutingModule,FormsModule,HttpClientModule ,ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    UserRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   exports: [LoginComponent, RegisterComponent],
 })
 export class UserModule {}

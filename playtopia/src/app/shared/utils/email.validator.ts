@@ -7,6 +7,6 @@ export function emailValidator(domains: string[]): ValidatorFn {
   return (control) => {
     const isInvaalid = control.value === '' || regExp.test(control.value);
 
-    return isInvaalid?  null : {emailValidator:true};
+    return isInvaalid ? null : { emailValidator: true };
   };
 }

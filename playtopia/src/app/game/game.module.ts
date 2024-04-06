@@ -8,6 +8,6 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AddGameComponent, DetailComponent, StoreComponent],
-  imports: [CommonModule, GameRoutingModule,FormsModule],
+  imports: [CommonModule, GameRoutingModule, FormsModule],
 })
 export class GameModule {}
