@@ -20,10 +20,31 @@ export class StoreComponent implements OnInit {
       }
     );
   }
+  getAllHandler() {
+    this.gameService.getAllGames().subscribe(
+      (data: any) => {
+        this.games = data;
+      },
+      (error) => {
+        console.error('Error occurred while fetching games:', error);
+      }
+    );
+  }
 
   getGameByGenreHandler(genre: string) {
     this.games = []; // Clear the games array
     this.gameService.getGamesByGenre(genre).subscribe(
+      (data: any) => {
+        this.games = data;
+      },
+      (error) => {
+        console.error('Error occurred while fetching games by genre:', error);
+      }
+    );
+  }
+
+  searchHandler(searchParams: string | null) {
+    this.gameService.searchGame(searchParams).subscribe(
       (data: any) => {
         this.games = data;
       },

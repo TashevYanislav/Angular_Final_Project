@@ -6,6 +6,9 @@
     <div class="search_container">
       <div class="search_panel">
         <div>
+          <p (click)="getAllHandler()">All Games</p>
+        </div>
+        <div>
           <p
             #genreAction
             (click)="getGameByGenreHandler(genreAction.innerText)"
@@ -54,8 +57,8 @@
           </p>
         </div>
         <div class="search_bar">
-          <input type="text" placeholder="Search..." />
-          <button type="submit">
+          <input #searchParams type="text" placeholder="Search..." />
+          <button (click)="searchHandler(searchParams.value)">
             <i class="fas fa-search"></i>
           </button>
         </div>

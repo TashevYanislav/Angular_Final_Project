@@ -42,4 +42,12 @@ export class GameService {
   getGamesByGenre(genre: string) {
     return this.http.get(`${this.URL}/games?where=genre%3D%22${genre}%22`);
   }
+
+  searchGame(searchParams: string | null) {
+    console.log(searchParams);
+
+    return this.http.get(
+      `${this.URL}/games?where=game_name%20LIKE%20%22${searchParams}%22`
+    );
+  }
 }
