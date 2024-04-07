@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { gameForm } from '../types/game';
-import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -21,13 +20,10 @@ export class GameService {
     }),
   };
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient) {}
 
   addGame(formValue: gameForm) {
-    this.http
-      .post(`${this.URL}/games`, formValue, this.httpOptionsAuth)
-      .subscribe();
-    this.router.navigate(['/store']);
+    return this.http.post(`${this.URL}/games`, formValue, this.httpOptionsAuth);
   }
   deleteGame() {}
   editGame() {}
