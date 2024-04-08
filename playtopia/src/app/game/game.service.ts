@@ -46,6 +46,20 @@ export class GameService {
     };
     return this.http.put(`${this.URL}/games/${id}`, httpOptionsAuth);
   }
+  likeGame(id: string | null, user_id: string | null) {
+    let token = localStorage.getItem('token');
+    let httpOptionsAuth = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'X-Authorization': token || '',
+      }),
+    };
+    return this.http.post(
+      `${this.URL}/likes`,
+      { id, user_id },
+      httpOptionsAuth
+    );
+  }
   getAllGames() {
     return this.http.get(`${this.URL}/games`, this.httpOptions);
   }

@@ -27,4 +27,7 @@ export class DetailComponent implements OnInit {
     this.gameService.deleteGame(this.id).subscribe();
     this.router.navigate(['/store']);
   }
+  LikeHandler() {
+    this.gameService.likeGame(this.id,this.user_id).subscribe(console.log);
+  }
 }

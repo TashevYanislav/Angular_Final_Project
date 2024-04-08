@@ -7,13 +7,17 @@
     <div class="description">
       <h2>{{ game.game_name }}</h2>
       <p><span class="genre-label">Genre: </span>{{ game.genre }}</p>
-      <p><span class="genre-label">Description: </span>{{ game.description }}</p>
+      <p>
+        <span class="genre-label">Description: </span>{{ game.description }}
+      </p>
       <p><span class="genre-label">Price: </span>{{ game.price }} $</p>
       <div class="buttons" *ngIf="user_id">
         <div *ngIf="user_id !== game._ownerId">
           <button>Add to cart</button>
           <button>
-            <i><img src="../../../assets/Heart_White.png" alt="Like" /></i>
+            <i (click)="LikeHandler()">
+              <img src="../../../assets/Heart_White.png" alt="Like" />
+            </i>
           </button>
         </div>
       </div>
