@@ -47,7 +47,7 @@
   <div>
     <ul class="other-games-row">
       <li *ngFor="let latesGame of latestGames">
-        <a routerLink="/details">
+        <a routerLink="/details/{{ latesGame._id }}">
           <img [src]="latesGame.game_img" [alt]="latesGame.game_name" />
         </a>
         <p>{{ latesGame.game_name }}</p>
