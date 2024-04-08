@@ -40,6 +40,15 @@
                 "price": 60,
                 "_createdOn": 1712248518995
             },
+            "05b6c98b-79e4-4e9d-9e18-25dcbd811103": {
+                "_ownerId": "51d67fce-1a1d-4ac7-b92c-956943e98bc6",
+                "game_name": "Mortal Kombat 11",
+                "game_img": "https://upload.wikimedia.org/wikipedia/en/7/7e/Mortal_Kombat_11_cover_art.png",
+                "description": " Imagine a spectacle where warriors from realms beyond engage in a dance of fate, where each move resonates with the rhythm of destiny. Mortal Kombat is not merely a battle; it's a symphony of martial prowess and mystical powers. Feel the adrenaline surge as fighters from diverse backgrounds clash in a tournament that transcends the realms.",
+                "genre": "Action",
+                "price": 31,
+                "_createdOn": 1712565288128
+            },
             "a210ccbe-8cdd-41f6-b9e9-5953d4221bcf": {
                 "_ownerId": "49c4efe0-087d-4e97-a4b1-ba80b4560680",
                 "game_name": "Uncharted 4: A Thief's End",
@@ -57,6 +66,15 @@
                 "genre": "Adventure",
                 "price": 29.99,
                 "_createdOn": 1712249402452
+            },
+            "85464ab3-edf2-4c30-b8c0-24d7fc46dac9": {
+                "_ownerId": "07daa6e0-7ba1-4287-847f-6b637acae45f",
+                "game_name": "Red Dead Redemption 2",
+                "game_img": "https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png",
+                "description": "\nSaddle up and ride into the wild west in Red Dead Redemption! Set in the early 20th century, this epic open-world adventure thrusts you into the role of John Marston, an outlaw seeking redemption. Explore vast landscapes, encounter colorful characters, and engage in intense shootouts as you navigate the lawless frontier.",
+                "genre": "Adventure",
+                "price": 35,
+                "_createdOn": 1712477261581
             },
             "7137ae54-e252-41d4-938f-43972fec9050": {
                 "_ownerId": "e40d0515-0eb5-405d-9c46-f7fd1259ad1e",
