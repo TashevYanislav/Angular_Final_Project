@@ -30,7 +30,9 @@ export class GameService {
   getAllGames() {
     return this.http.get(`${this.URL}/games`, this.httpOptions);
   }
-  getCurrentGame() {}
+  getCurrentGame(id: string | null) {
+    return this.http.get(`${this.URL}/games/${id}`, this.httpOptions);
+  }
 
   getLatestFiveGames() {
     return this.http.get(
