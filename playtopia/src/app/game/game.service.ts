@@ -26,7 +26,7 @@ export class GameService {
     };
     return this.http.post(`${this.URL}/games`, formValue, httpOptionsAuth);
   }
-  deleteGame(id: string) {
+  deleteGame(id: string | null) {
     let token = localStorage.getItem('token');
     let httpOptionsAuth = {
       headers: new HttpHeaders({

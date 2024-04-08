@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -10,15 +10,21 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailComponent implements OnInit {
   game: any = null;
   user_id = localStorage.getItem('user_id');
+  id: string | null = this.activeRoute.snapshot.paramMap.get('id');
   constructor(
     public gameService: GameService,
-    private activeRoute: ActivatedRoute
+    private activeRoute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    let id: string | null = this.activeRoute.snapshot.paramMap.get('id');
-    this.gameService.getCurrentGame(id).subscribe((data: any) => {
+    this.gameService.getCurrentGame(this.id).subscribe((data: any) => {
       this.game = data;
     });
+  }
+
+  DeleteHangler() {
+    this.gameService.deleteGame(this.id).subscribe();
+    this.router.navigate(['/store']);
   }
 }

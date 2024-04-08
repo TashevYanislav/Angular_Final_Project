@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-store',
@@ -9,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class StoreComponent implements OnInit {
   games: any[] = [];
-  constructor(private gameService: GameService, private router: Router) {}
+  constructor(private gameService: GameService) {}
 
   ngOnInit(): void {
     this.gameService.getAllGames().subscribe(
