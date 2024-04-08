@@ -22,6 +22,9 @@ h6 {
   font-size: 70px;
   margin-bottom: 10px;
 }
+p{
+  color: white;
+}
 
 .image img {
   width: 550px;
