@@ -9,6 +9,7 @@ export interface onRegisterData {
   email: string;
   password: string;
   accessToken: string;
+  _id: string;
 }
 
 export interface LoginData {
