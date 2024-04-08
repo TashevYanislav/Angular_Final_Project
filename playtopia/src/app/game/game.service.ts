@@ -7,13 +7,7 @@ import { gameForm } from '../types/game';
 })
 export class GameService {
   URL: string = 'http://localhost:3030/data';
-  token = localStorage.getItem('token');
-  httpOptionsAuth = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'X-Authorization': this.token || '',
-    }),
-  };
+
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -23,10 +17,35 @@ export class GameService {
   constructor(private http: HttpClient) {}
 
   addGame(formValue: gameForm) {
-    return this.http.post(`${this.URL}/games`, formValue, this.httpOptionsAuth);
+    let token = localStorage.getItem('token');
+    let httpOptionsAuth = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'X-Authorization': token || '',
+      }),
+    };
+    return this.http.post(`${this.URL}/games`, formValue, httpOptionsAuth);
   }
-  deleteGame() {}
-  editGame() {}
+  deleteGame(id: string) {
+    let token = localStorage.getItem('token');
+    let httpOptionsAuth = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'X-Authorization': token || '',
+      }),
+    };
+    return this.http.delete(`${this.URL}/games/${id}`, httpOptionsAuth);
+  }
+  editGame(id: string) {
+    let token = localStorage.getItem('token');
+    let httpOptionsAuth = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'X-Authorization': token || '',
+      }),
+    };
+    return this.http.put(`${this.URL}/games/${id}`, httpOptionsAuth);
+  }
   getAllGames() {
     return this.http.get(`${this.URL}/games`, this.httpOptions);
   }
