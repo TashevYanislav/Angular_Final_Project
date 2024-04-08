@@ -6,9 +6,9 @@
 
     <div class="description">
       <h2>{{ game.game_name }}</h2>
-      <p>{{ game.genre }}</p>
-      <p>{{ game.description }}</p>
-      <p>Price: {{ game.price }} $</p>
+      <p><span class="genre-label">Genre: </span>{{ game.genre }}</p>
+      <p><span class="genre-label">Description: </span>{{ game.description }}</p>
+      <p><span class="genre-label">Price: </span>{{ game.price }} $</p>
       <div class="buttons" *ngIf="user_id">
         <div *ngIf="user_id !== game._ownerId">
           <button>Add to cart</button>
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="buttons" *ngIf="user_id === game._ownerId">
-        <button>Delete</button>
+        <button (click)="DeleteHangler()">Delete</button>
         <button>Edit</button>
       </div>
     </div>

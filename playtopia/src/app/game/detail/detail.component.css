@@ -22,7 +22,7 @@ h6 {
   font-size: 70px;
   margin-bottom: 10px;
 }
-p{
+p {
   color: white;
 }
 
@@ -60,4 +60,10 @@ button:hover {
 button img {
   width: 40px;
   margin: 0px;
+}
+
+.genre-label {
+  text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 4px 0 #ffffff,
+    2px 2px 0 #ffffff;
+  color: #000000;
 }
