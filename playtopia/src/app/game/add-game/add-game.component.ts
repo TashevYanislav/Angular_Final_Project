@@ -17,7 +17,7 @@ export class AddGameComponent {
       form.reset();
       return;
     }
-    console.log(form.value);
+    
     this.gameService.addGame(form.value).subscribe();
     this.router.navigate(['/store']);
   }
