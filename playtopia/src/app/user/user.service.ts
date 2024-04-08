@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class UserService {
   URL: string = 'http://localhost:3030/users';
   isLogedInBool: boolean = false;
+  token: string = '';
+  user_id: string = '';
   constructor(private http: HttpClient, private router: Router) {}
 
   httpOptions = {
@@ -22,8 +24,12 @@ export class UserService {
       .subscribe(
         (response) => {
           console.log('POST request was successful', response);
-          const token = response.accessToken;
-          localStorage.setItem('token', token);
+          this.token = response.accessToken;
+          console.log(this.token);
+          localStorage.setItem('token', this.token);
+          this.user_id = response._id;
+          localStorage.setItem('user_id', this.user_id);
+
           this.isLogedInBool = true;
           this.router.navigate(['/']);
         },
@@ -39,8 +45,11 @@ export class UserService {
       .subscribe(
         (response) => {
           console.log('POST request was successful', response);
-          const token = response.accessToken;
-          localStorage.setItem('token', token);
+          this.token = response.accessToken;
+          console.log(this.token);
+          localStorage.setItem('token', this.token);
+          this.user_id = response._id;
+          localStorage.setItem('user_id', this.user_id);
           this.isLogedInBool = true;
           this.router.navigate(['/']);
         },
@@ -68,6 +77,7 @@ export class UserService {
       () => {
         console.log('Logout successful');
         localStorage.removeItem('token');
+        localStorage.removeItem('user_id');
         this.isLogedInBool = false;
         this.router.navigate(['/']);
       },
