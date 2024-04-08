@@ -1,5 +1,5 @@
 <body>
-  <main>
+  <main *ngIf="game">
     <div class="image">
       <img [src]="game.game_img" [alt]="game.game_name" />
     </div>
@@ -9,9 +9,17 @@
       <p>{{ game.genre }}</p>
       <p>{{ game.description }}</p>
       <p>Price: {{ game.price }} $</p>
-      <div class="buttons">
-        <button>Add to cart</button>
-        <button><i><img src="../../../assets/Heart_White.png" alt="Like"></i></button>
+      <div class="buttons" *ngIf="user_id">
+        <div *ngIf="user_id !== game._ownerId">
+          <button>Add to cart</button>
+          <button>
+            <i><img src="../../../assets/Heart_White.png" alt="Like" /></i>
+          </button>
+        </div>
+      </div>
+      <div class="buttons" *ngIf="user_id === game._ownerId">
+        <button>Delete</button>
+        <button>Edit</button>
       </div>
     </div>
   </main>

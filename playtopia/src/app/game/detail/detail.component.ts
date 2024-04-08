@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailComponent implements OnInit {
   game: any = null;
+  user_id = localStorage.getItem('user_id');
   constructor(
     public gameService: GameService,
     private activeRoute: ActivatedRoute
@@ -18,7 +19,6 @@ export class DetailComponent implements OnInit {
     let id: string | null = this.activeRoute.snapshot.paramMap.get('id');
     this.gameService.getCurrentGame(id).subscribe((data: any) => {
       this.game = data;
-      console.log(this.game);
     });
   }
 }
