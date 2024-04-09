@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { gameForm } from '../types/game';
-import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -73,7 +72,7 @@ export class GameService {
     );
   }
 
-  delteLikeGame(id: string | null) {
+  deleteLikeGame(id: string | null) {
     let token = localStorage.getItem('token');
     let httpOptionsAuth = {
       headers: new HttpHeaders({
