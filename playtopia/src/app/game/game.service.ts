@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { gameForm } from '../types/game';
+import { Observable, forkJoin } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -95,6 +96,44 @@ export class GameService {
       `${this.URL}/games?sortBy=_createdOn desc&pageSize=5`,
       this.httpOptions
     );
+  }
+
+  getMostPopular(topCount: number): Observable<{ [key: string]: number }> {
+    let games: any[] = [];
+    let gamesIdAndLike: { [key: string]: number } = {};
+
+    return new Observable((observer) => {
+      this.getAllGames().subscribe((data: any) => {
+        games = data;
+
+        // Create an array of observables for each HTTP request
+        const observables = games.map((game) => {
+          return this.getLikesCount(game._id);
+        });
+
+        // Wait for all HTTP requests to complete
+        forkJoin(observables).subscribe((likesData: any[]) => {
+          // Combine games with their corresponding likes count
+          games.forEach((game, index) => {
+            gamesIdAndLike[game._id] = likesData[index];
+          });
+
+          // Sort the games by likes count in descending order
+          const sortedGamesArray = Object.entries(gamesIdAndLike).sort(
+            (a, b) => b[1] - a[1]
+          );
+
+          // Get the top N games
+          const topGames = sortedGamesArray.slice(0, topCount);
+
+          // Convert top games array back to an object
+          const topGamesObject = Object.fromEntries(topGames);
+
+          observer.next(topGamesObject);
+          observer.complete();
+        });
+      });
+    });
   }
 
   getGamesByGenre(genre: string) {

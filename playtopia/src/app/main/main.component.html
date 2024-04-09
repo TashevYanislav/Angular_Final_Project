@@ -10,32 +10,11 @@
 
   <div>
     <ul class="popular-games-row">
-      <li>
-        <a routerLink="/details">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/b/be/World_of_Warcraft_Wrath_of_the_Lich_King.png"
-            alt="World_of_Warcraft_Wrath_of_the_Lich_King"
-          />
+      <li *ngFor="let popularGame of popularGames">
+        <a routerLink="/details{{ popularGame._id }}">
+          <img [src]="popularGame.game_img" [alt]="popularGame.game_name" />
         </a>
-        <p>World of Warcraft: Wrath of the Lich King</p>
-      </li>
-      <li>
-        <a routerLink="/details">
-          <img
-            src="https://cdn.europosters.eu/image/1300/posters/the-last-of-us-2-ellie-i76718.jpg"
-            alt="The_Last_Of_Us"
-          />
-        </a>
-        <p>The Last Of Us Part 2</p>
-      </li>
-      <li>
-        <a routerLink="/details">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/d/d2/Don%27t_Starve_cover.jpg"
-            alt="Don't_Starve"
-          />
-        </a>
-        <p>Don't Starve</p>
+        <p>{{ popularGame.game_name }}</p>
       </li>
     </ul>
   </div>
