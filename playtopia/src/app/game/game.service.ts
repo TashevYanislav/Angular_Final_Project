@@ -60,6 +60,18 @@ export class GameService {
       httpOptionsAuth
     );
   }
+
+  delteLikeGame(id: string | null) {
+    let token = localStorage.getItem('token');
+    let httpOptionsAuth = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'X-Authorization': token || '',
+      }),
+    };
+    return this.http.delete(`${this.URL}/likes/${id}`, httpOptionsAuth);
+  }
+
   getAllGames() {
     return this.http.get(`${this.URL}/games`, this.httpOptions);
   }
