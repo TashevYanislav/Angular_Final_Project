@@ -88,3 +88,22 @@ h6 {
 .other-games-row li img:hover {
   transform: scale(1.03);
 }
+
+button {
+  cursor: pointer;
+  font-family: "Bevan", serif;
+  margin: 50px;
+  background-color: #3aaebd;
+  color: white;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 3px 0 #000,
+    2px 2px 0 #000;
+  border: solid 5px black;
+  border-radius: 20px;
+  font-size: 50px;
+}
+button:hover {
+  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 3px 0 #fff,
+    2px 2px 0 #fff;
+  color: #000000;
+  border: solid 5px white;
+}
