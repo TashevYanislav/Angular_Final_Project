@@ -11,7 +11,7 @@
   <div>
     <ul class="popular-games-row">
       <li *ngFor="let popularGame of popularGames">
-        <a routerLink="/details{{ popularGame._id }}">
+        <a routerLink="/details/{{ popularGame._id }}">
           <img [src]="popularGame.game_img" [alt]="popularGame.game_name" />
         </a>
         <p>{{ popularGame.game_name }}</p>
