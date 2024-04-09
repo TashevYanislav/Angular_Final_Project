@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { gameForm } from '../types/game';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -46,7 +47,8 @@ export class GameService {
     };
     return this.http.put(`${this.URL}/games/${id}`, httpOptionsAuth);
   }
-  likeGame(id: string | null, user_id: string | null) {
+
+  likeGame(id: string | null) {
     let token = localStorage.getItem('token');
     let httpOptionsAuth = {
       headers: new HttpHeaders({
@@ -54,10 +56,20 @@ export class GameService {
         'X-Authorization': token || '',
       }),
     };
-    return this.http.post(
-      `${this.URL}/likes`,
-      { id, user_id },
-      httpOptionsAuth
+    return this.http.post(`${this.URL}/likes`, { id }, httpOptionsAuth);
+  }
+
+  getLikes(id: string | null) {
+    return this.http.get(
+      `${this.URL}/likes?where=id%3D%22${id}%22`,
+      this.httpOptions
+    );
+  }
+
+  getLikesCount(id: string | null) {
+    return this.http.get(
+      `${this.URL}/likes?where=id%3D%22${id}%22&count`,
+      this.httpOptions
     );
   }
 

@@ -16,8 +16,17 @@
           <button>Add to cart</button>
           <button>
             <i (click)="LikeHandler()">
-              <img *ngIf="!isLiked" src="../../../assets/Heart_White.png" alt="Like" />
-              <img *ngIf="isLiked" src="../../../assets/Heart_Red.png" alt="Like" />
+              <img
+                *ngIf="!isLiked"
+                src="../../../assets/Heart_White.png"
+                alt="Like"
+              />
+              <img
+                *ngIf="isLiked"
+                src="../../../assets/Heart_Red.png"
+                alt="Like"
+              />
+              <p>{{ likesCount }}</p>
             </i>
           </button>
         </div>
