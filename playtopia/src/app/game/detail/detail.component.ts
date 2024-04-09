@@ -13,7 +13,9 @@ export class DetailComponent implements OnInit {
   id: string | null = this.activeRoute.snapshot.paramMap.get('id');
   isLiked: boolean = false;
   like_id: string | null = '';
+
   likesCount: number = 0;
+
   constructor(
     public gameService: GameService,
     private activeRoute: ActivatedRoute,
@@ -49,12 +51,22 @@ export class DetailComponent implements OnInit {
     if (!this.isLiked) {
       this.gameService.likeGame(this.id).subscribe((response: any) => {
         this.like_id = response._id;
+        this.fetchAndUpdateLikesCount();
       });
 
       this.isLiked = true;
     } else {
-      this.gameService.delteLikeGame(this.like_id).subscribe();
+      this.gameService.deleteLikeGame(this.like_id).subscribe(() => {
+        this.fetchAndUpdateLikesCount();
+      });
       this.isLiked = false;
     }
+  }
+
+  fetchAndUpdateLikesCount() {
+    this.gameService.getLikesCount(this.id).subscribe((data: any) => {
+      this.likesCount = data;
+      console.log(this.likesCount);
+    });
   }
 }
