@@ -1,0 +1,76 @@
+body {
+  background-image: url("../../../assets/BANNER_form.png");
+  background-size: cover;
+}
+
+.form_el p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 4px 0 #000,
+    2px 2px 0 #000;
+
+  color: white;
+}
+.form_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.form_content img {
+  padding-top: 150px;
+  width: 800px;
+  /* filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1)); */
+}
+
+.form_data {
+  padding: 100px 300px 10px 200px;
+}
+
+.form_data label {
+  font-size: 50px;
+}
+
+.form_data h2 {
+  font-size: 70px;
+}
+
+form input,
+select,
+textarea {
+  font-size: 30px;
+  border-radius: 10px;
+  font-family: "Bevan", serif;
+  margin-bottom: 10px;
+  border: 4px solid black;
+}
+
+select {
+  cursor: pointer;
+}
+
+.button {
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  background-color: #3aaebd;
+  color: rgb(255, 255, 255);
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 4px 0 #000,
+    2px 2px 0 #000;
+}
+.button:hover {
+  border: 5px solid white;
+  text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 4px 0 #ffffff,
+    2px 2px 0 #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+.error {
+  font-size: 20px;
+  color: red !important;
+}

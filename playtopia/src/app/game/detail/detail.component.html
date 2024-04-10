@@ -17,8 +17,16 @@
           <div class="like-container">
             <button class="like-button" (click)="LikeHandler()">
               <i>
-                <img *ngIf="!isLiked" src="../../../assets/Heart_White.png" alt="Like" />
-                <img *ngIf="isLiked" src="../../../assets/Heart_Red.png" alt="Like" />
+                <img
+                  *ngIf="!isLiked"
+                  src="../../../assets/Heart_White.png"
+                  alt="Like"
+                />
+                <img
+                  *ngIf="isLiked"
+                  src="../../../assets/Heart_Red.png"
+                  alt="Like"
+                />
               </i>
             </button>
             <p class="count">{{ likesCount }}</p>
@@ -27,7 +35,7 @@
       </div>
       <div class="buttons" *ngIf="user_id === game._ownerId">
         <button (click)="DeleteHangler()">Delete</button>
-        <button>Edit</button>
+        <button routerLink="/edit/{{ game._id }}">Edit</button>
       </div>
     </div>
   </main>
