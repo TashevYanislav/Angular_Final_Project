@@ -63,6 +63,7 @@ export class RegisterComponent {
       (error) => {
         console.error('Error occurred during POST request', error);
         this.errorMessage = error;
+        this.registerForm.reset();
       }
     );
   }
