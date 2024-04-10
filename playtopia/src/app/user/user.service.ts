@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginData, RegisterData, onRegisterData } from '../types/user';
 import { Router } from '@angular/router';
+import { Observable, catchError, tap, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -18,27 +19,20 @@ export class UserService {
       'Content-Type': 'application/json',
     }),
   };
-  register(data: RegisterData) {
+  register(data: RegisterData): Observable<any> {
     return this.http
       .post<onRegisterData>(`${this.URL}/register`, data, this.httpOptions)
-      .subscribe(
-        (response) => {
-          console.log('POST request was successful', response);
-          this.token = response.accessToken;
-          console.log(this.token);
-          localStorage.setItem('token', this.token);
-          this.user_id = response._id;
-          localStorage.setItem('user_id', this.user_id);
-
-          this.isLogedInBool = true;
-          this.router.navigate(['/']);
-        },
-        (error) => {
-          console.error('Error occurred during POST request', error);
-        }
+      .pipe(
+        tap(() => {
+          console.log('Registration successful');
+          this.isLogedInBool = true; // Update isLogedInBool upon successful registration
+        }),
+        catchError((error) => {
+          console.error('POST request failed:', error);
+          return throwError(error.error.message || 'An unknown error occurred');
+        })
       );
   }
-
   login(data: LoginData) {
     return this.http
       .post<onRegisterData>(`${this.URL}/login`, data, this.httpOptions)
@@ -88,6 +82,8 @@ export class UserService {
     );
   }
   isLogedin() {
+    console.log();
+
     return this.isLogedInBool;
   }
 }
