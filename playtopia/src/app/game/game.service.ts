@@ -37,7 +37,7 @@ export class GameService {
     };
     return this.http.delete(`${this.URL}/games/${id}`, httpOptionsAuth);
   }
-  editGame(id: string) {
+  editGame(id: string | null, formValue: any) {
     let token = localStorage.getItem('token');
     let httpOptionsAuth = {
       headers: new HttpHeaders({
@@ -45,7 +45,7 @@ export class GameService {
         'X-Authorization': token || '',
       }),
     };
-    return this.http.put(`${this.URL}/games/${id}`, httpOptionsAuth);
+    return this.http.put(`${this.URL}/games/${id}`, formValue, httpOptionsAuth);
   }
 
   likeGame(id: string | null) {

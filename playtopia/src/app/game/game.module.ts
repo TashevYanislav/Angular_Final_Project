@@ -5,9 +5,10 @@ import { DetailComponent } from './detail/detail.component';
 import { StoreComponent } from './store/store.component';
 import { GameRoutingModule } from './game-routing.module';
 import { FormsModule } from '@angular/forms';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
-  declarations: [AddGameComponent, DetailComponent, StoreComponent],
+  declarations: [AddGameComponent, DetailComponent, StoreComponent, EditComponent],
   imports: [CommonModule, GameRoutingModule, FormsModule],
 })
 export class GameModule {}
