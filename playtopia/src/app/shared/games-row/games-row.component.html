@@ -1,0 +1,10 @@
+<div>
+  <ul class="other-games-row">
+    <li *ngFor="let game of games">
+      <a [routerLink]="'/details/' + game._id">
+        <img [src]="game.game_img" [alt]="game.game_name" />
+      </a>
+      <p>{{ game.game_name }}</p>
+    </li>
+  </ul>
+</div>

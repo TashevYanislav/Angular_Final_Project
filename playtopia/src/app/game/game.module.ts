@@ -6,9 +6,15 @@ import { StoreComponent } from './store/store.component';
 import { GameRoutingModule } from './game-routing.module';
 import { FormsModule } from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [AddGameComponent, DetailComponent, StoreComponent, EditComponent],
-  imports: [CommonModule, GameRoutingModule, FormsModule],
+  declarations: [
+    AddGameComponent,
+    DetailComponent,
+    StoreComponent,
+    EditComponent,
+  ],
+  imports: [CommonModule, GameRoutingModule, FormsModule, SharedModule],
 })
 export class GameModule {}

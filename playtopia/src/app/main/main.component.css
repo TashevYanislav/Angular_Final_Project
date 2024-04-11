@@ -63,31 +63,7 @@ h6 {
 }
 
 /* other games row */
-.other-games-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: space-evenly;
-  list-style: none;
-}
 
-.other-games-row li {
-  margin: 30px;
-  text-align: center;
-}
-
-.other-games-row li img {
-  width: 300px;
-  height: 300px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 1);
-  margin-bottom: 30px;
-  transition: transform 0.5s ease;
-  object-fit: cover;
-  object-position: center top;
-}
-.other-games-row li img:hover {
-  transform: scale(1.03);
-}
 
 button {
   cursor: pointer;
