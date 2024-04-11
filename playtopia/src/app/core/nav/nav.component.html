@@ -18,6 +18,9 @@
       </div>
     </li>
     <li>
+      <a routerLink="/cart" *ngIf="userService.isLogedin()">Cart</a>
+    </li>
+    <li>
       <a *ngIf="userService.isLogedin()" (click)="logoutHandler()">Logout</a>
     </li>
   </ul>
