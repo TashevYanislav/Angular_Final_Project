@@ -23,15 +23,5 @@
     <h2>Latest Games</h2>
   </div>
 
-  <div>
-    <ul class="other-games-row">
-      <li *ngFor="let latesGame of latestGames">
-        <a routerLink="/details/{{ latesGame._id }}">
-          <img [src]="latesGame.game_img" [alt]="latesGame.game_name" />
-        </a>
-        <p>{{ latesGame.game_name }}</p>
-      </li>
-      <button routerLink="/store">Go to The Store</button>
-    </ul>
-  </div>
+  <app-games-row [games]="latestGames"></app-games-row>
 </main>
