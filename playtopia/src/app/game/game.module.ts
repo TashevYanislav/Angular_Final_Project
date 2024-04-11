@@ -7,6 +7,7 @@ import { GameRoutingModule } from './game-routing.module';
 import { FormsModule } from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { SharedModule } from '../shared/shared.module';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SharedModule } from '../shared/shared.module';
     DetailComponent,
     StoreComponent,
     EditComponent,
+    CartComponent,
   ],
   imports: [CommonModule, GameRoutingModule, FormsModule, SharedModule],
 })
