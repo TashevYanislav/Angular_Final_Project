@@ -70,16 +70,6 @@
       <h2>IN ONE PLACE</h2>
     </div>
 
-    <div>
-      <h2 *ngIf="games.length === 0" class="store_title">No Games yet!</h2>
-      <ul class="other-games-row">
-        <li *ngFor="let game of games">
-          <a routerLink="/details/{{ game._id }}">
-            <img [src]="game.game_img" [alt]="game.game_name" />
-          </a>
-          <p>{{ game.game_name }}</p>
-        </li>
-      </ul>
-    </div>
+    <app-games-row [games]="games"></app-games-row>
   </main>
 </body>
