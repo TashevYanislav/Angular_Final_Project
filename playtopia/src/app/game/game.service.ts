@@ -140,6 +140,22 @@ export class GameService {
     return this.http.get(`${this.URL}/games?where=genre%3D%22${genre}%22`);
   }
 
+  addToCart(userId: string | null, game: any): Observable<any> {
+    debugger;
+    let token = localStorage.getItem('token');
+    const httpOptionsAuth = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'X-Authorization': token || '',
+      }),
+    };
+    return this.http.post(`${this.URL}/${userId}`, game, httpOptionsAuth);
+  }
+
+  getAllGamesByUser(user_id: string | null) {
+    return this.http.get(`${this.URL}/${user_id}`, this.httpOptions);
+  }
+
   searchGame(searchParams: string | null) {
     console.log(searchParams);
 
