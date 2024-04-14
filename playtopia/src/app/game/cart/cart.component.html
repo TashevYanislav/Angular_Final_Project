@@ -2,38 +2,23 @@
   <header>
     <h2>My Cart</h2>
   </header>
-  <div class="item_hr">
+  <div class="item_hr" *ngFor="let cartGame of cartGames">
     <hr />
     <div class="item">
       <div class="img_div">
-        <img
-          src="https://cdn1.epicgames.com/offer/fn/FNJN_01_EGS_Launcher_Blade_1200x1600_1200x1600-99a63516ad876366afe0b41538cf4ea0"
-          alt="game_img"
-        />
+        <a [routerLink]="'/details/' + cartGame.details_id">
+
+          <img [src]="cartGame.gameImage" [alt]="cartGame.gameName" />
+        </a>
       </div>
       <div class="info">
-        <p>Lego Fortnite</p>
-        <p>Price: 35 $</p>
+        <p>{{ cartGame.gameName }}</p>
+        <p>Price: {{ cartGame.gamePrice }} $</p>
         <button>Delete</button>
       </div>
     </div>
   </div>
-  <div class="item_hr">
-    <hr />
-    <div class="item">
-      <div class="img_div">
-        <img
-          src="https://cdn1.epicgames.com/offer/fn/FNJN_01_EGS_Launcher_Blade_1200x1600_1200x1600-99a63516ad876366afe0b41538cf4ea0"
-          alt="game_img"
-        />
-      </div>
-      <div class="info">
-        <p>Lego Fortnite</p>
-        <p>Price: 35 $</p>
-        <button>Delete</button>
-      </div>
-    </div>
-  </div>
+
   <hr />
   <div class="total">
     <h2>Total: 70$</h2>
