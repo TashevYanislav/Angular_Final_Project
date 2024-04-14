@@ -69,4 +69,19 @@ export class DetailComponent implements OnInit {
       console.log(this.likesCount);
     });
   }
+
+  addToCartHandler() {
+    let currentGame = {
+      gameName: this.game.game_name,
+      gameGenre: this.game.genre,
+      gameDescription: this.game.description,
+      gameImage: this.game.game_img,
+      gamePrice: this.game.price,
+      details_id: this.game._id,
+    };
+
+    this.gameService
+      .addToCart(this.user_id, currentGame)
+      .subscribe(console.log);
+  }
 }
