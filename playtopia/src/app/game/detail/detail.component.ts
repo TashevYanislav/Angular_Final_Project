@@ -41,6 +41,12 @@ export class DetailComponent implements OnInit {
     this.gameService.getLikesCount(this.id).subscribe((data: any) => {
       this.likesCount = data;
     });
+    this.gameService.getAllGamesByUser(this.user_id).subscribe((data: any) => {
+      this.isLiked = data.some((game: any) => {
+        console.log(game._ownerId === this.user_id);
+        return game._ownerId === this.user_id;
+      });
+    });
   }
 
   DeleteHangler() {

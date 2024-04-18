@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LoginData } from 'src/app/types/user';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,11 @@ import { UserService } from '../user.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  constructor(private userService: UserService) {}
+  token: string = '';
+  user_id: string = '';
+  errorMessage: string = '';
+  @ViewChild('LoginForm', { static: false }) loginForm!: NgForm;
+  constructor(private userService: UserService, private router: Router) {}
 
   formSubmitHandler(form: NgForm) {
     if (form.invalid) {
@@ -25,6 +30,21 @@ export class LoginComponent {
 
     console.log(form.value);
 
-    this.userService.login(data);
+    this.userService.login(data).subscribe(
+      (response) => {
+        console.log('POST request was successful', response);
+        this.token = response.accessToken;
+        console.log(this.token);
+        localStorage.setItem('token', this.token);
+        this.user_id = response._id;
+        localStorage.setItem('user_id', this.user_id);
+        this.router.navigate(['/']);
+      },
+      (error) => {
+        console.error('Error occurred during POST request', error);
+        this.errorMessage = error;
+        this.loginForm.reset();
+      }
+    );
   }
 }

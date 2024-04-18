@@ -36,20 +36,15 @@ export class UserService {
   login(data: LoginData) {
     return this.http
       .post<onRegisterData>(`${this.URL}/login`, data, this.httpOptions)
-      .subscribe(
-        (response) => {
-          console.log('POST request was successful', response);
-          this.token = response.accessToken;
-          console.log(this.token);
-          localStorage.setItem('token', this.token);
-          this.user_id = response._id;
-          localStorage.setItem('user_id', this.user_id);
-          this.isLogedInBool = true;
-          this.router.navigate(['/']);
-        },
-        (error) => {
-          console.error('Error occurred during POST request', error);
-        }
+      .pipe(
+        tap(() => {
+          console.log('Registration successful');
+          this.isLogedInBool = true; // Update isLogedInBool upon successful registration
+        }),
+        catchError((error) => {
+          console.error('POST request failed:', error);
+          return throwError(error.error.message || 'An unknown error occurred');
+        })
       );
   }
   logout() {
