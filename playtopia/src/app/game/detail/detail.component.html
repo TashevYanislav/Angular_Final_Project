@@ -13,7 +13,9 @@
       <p><span class="genre-label">Price: </span>{{ game.price }} $</p>
       <div class="buttons" *ngIf="user_id">
         <div *ngIf="user_id !== game._ownerId" class="button-container">
-          <button (click)="addToCartHandler()" class="add-to-cart-button">Add to cart</button>
+          <button (click)="addToCartHandler()" class="add-to-cart-button">
+            Add to cart
+          </button>
           <div class="like-container">
             <button class="like-button" (click)="LikeHandler()">
               <i>
