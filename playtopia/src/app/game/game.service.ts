@@ -37,6 +37,7 @@ export class GameService {
     };
     return this.http.delete(`${this.URL}/games/${id}`, httpOptionsAuth);
   }
+
   editGame(id: string | null, formValue: any) {
     let token = localStorage.getItem('token');
     let httpOptionsAuth = {
@@ -150,6 +151,17 @@ export class GameService {
       }),
     };
     return this.http.post(`${this.URL}/${userId}`, game, httpOptionsAuth);
+  }
+
+  deleteCartGame(id: string, user_id: string | null) {
+    let token = localStorage.getItem('token');
+    let httpOptionsAuth = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'X-Authorization': token || '',
+      }),
+    };
+    return this.http.delete(`${this.URL}/${user_id}/${id}`, httpOptionsAuth);
   }
 
   getAllGamesByUser(user_id: string | null) {
