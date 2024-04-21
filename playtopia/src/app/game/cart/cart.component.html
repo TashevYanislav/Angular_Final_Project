@@ -13,7 +13,7 @@
       <div class="info">
         <p>{{ cartGame.gameName }}</p>
         <p>Price: {{ cartGame.gamePrice }} $</p>
-        <button>Delete</button>
+        <button (click)="onDeleteHandler(cartGame._id)">Delete</button>
       </div>
     </div>
   </div>
@@ -23,6 +23,6 @@
     <hr />
   </div>
   <div class="total">
-    <h2>Total: 70$</h2>
+    <h2>Total: {{ totalPrice }} $</h2>
   </div>
 </div>
