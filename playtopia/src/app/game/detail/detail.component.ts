@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { cartGame, game, like } from 'src/app/types/game';
 
 @Component({
   selector: 'app-detail',
@@ -8,13 +9,13 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./detail.component.css'],
 })
 export class DetailComponent implements OnInit {
-  game: any = null;
-  user_id = localStorage.getItem('user_id');
+  game: game | null = null;
+  user_id: string | null = localStorage.getItem('user_id');
   id: string | null = this.activeRoute.snapshot.paramMap.get('id');
-  isLiked: boolean = false;
+  isLiked = false;
   like_id: string | null = '';
 
-  likesCount: number = 0;
+  likesCount = 0;
 
   constructor(
     public gameService: GameService,
@@ -23,45 +24,43 @@ export class DetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.gameService.getCurrentGame(this.id).subscribe((data: any) => {
+    this.gameService.getCurrentGame(this.id).subscribe((data: game) => {
       this.game = data;
     });
-    this.gameService.getLikes(this.id).subscribe((data: any) => {
-      data.filter((like: any) => {
-        this.like_id = like._id;
-      });
+
+    this.gameService.getLikes(this.id).subscribe((data: like[]) => {
+      this.like_id = data.length > 0 ? data[0]._id : null;
+      this.isLiked = data.some((like) => like._ownerId === this.user_id);
     });
 
-    this.gameService.getLikes(this.id).subscribe((data: any) => {
-      this.isLiked = data.some((like: any) => {
-        return like._ownerId === this.user_id;
-      });
-    });
-
-    this.gameService.getLikesCount(this.id).subscribe((data: any) => {
+    this.gameService.getLikesCount(this.id).subscribe((data: number) => {
       this.likesCount = data;
     });
-    this.gameService.getAllGamesByUser(this.user_id).subscribe((data: any) => {
-      this.isLiked = data.some((game: any) => {
-        console.log(game._ownerId === this.user_id);
-        return game._ownerId === this.user_id;
+
+    this.gameService
+      .getAllGamesByUser(this.user_id)
+      .subscribe((data: game[] | cartGame[]) => {
+        this.isLiked = data.some((game) => game._ownerId === this.user_id);
       });
-    });
   }
 
-  DeleteHangler() {
-    this.gameService.deleteGame(this.id).subscribe();
-    this.router.navigate(['/store']);
+  DeleteHandler(): void {
+    if (this.id) {
+      this.gameService.deleteGame(this.id).subscribe(() => {
+        this.router.navigate(['/store']);
+      });
+    }
   }
-  LikeHandler() {
-    if (!this.isLiked) {
-      this.gameService.likeGame(this.id).subscribe((response: any) => {
+
+  LikeHandler(): void {
+    if (!this.isLiked && this.id) {
+      this.gameService.likeGame(this.id).subscribe((response: like) => {
         this.like_id = response._id;
         this.fetchAndUpdateLikesCount();
       });
 
       this.isLiked = true;
-    } else {
+    } else if (this.like_id) {
       this.gameService.deleteLikeGame(this.like_id).subscribe(() => {
         this.fetchAndUpdateLikesCount();
       });
@@ -69,25 +68,30 @@ export class DetailComponent implements OnInit {
     }
   }
 
-  fetchAndUpdateLikesCount() {
-    this.gameService.getLikesCount(this.id).subscribe((data: any) => {
-      this.likesCount = data;
-      console.log(this.likesCount);
-    });
+  fetchAndUpdateLikesCount(): void {
+    if (this.id) {
+      this.gameService.getLikesCount(this.id).subscribe((data: number) => {
+        this.likesCount = data;
+      });
+    }
   }
 
-  addToCartHandler() {
-    let currentGame = {
-      gameName: this.game.game_name,
-      gameGenre: this.game.genre,
-      gameDescription: this.game.description,
-      gameImage: this.game.game_img,
-      gamePrice: this.game.price,
-      details_id: this.game._id,
-    };
+  addToCartHandler(): void {
+    if (this.game) {
+      const currentGame = {
+        gameName: this.game.game_name,
+        gameGenre: this.game.genre,
+        gameDescription: this.game.description,
+        gameImage: this.game.game_img,
+        gamePrice: this.game.price,
+        details_id: this.game._id,
+      };
 
-    this.gameService
-      .addToCart(this.user_id, currentGame)
-      .subscribe(console.log);
+      if (this.user_id) {
+        this.gameService
+          .addToCart(this.user_id, currentGame)
+          .subscribe(console.log);
+      }
+    }
   }
 }

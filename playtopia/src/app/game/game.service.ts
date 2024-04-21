@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { gameForm } from '../types/game';
 import { Observable, forkJoin } from 'rxjs';
+import { cartGame, game, gameForm, like } from '../types/game';
 
 @Injectable({
   providedIn: 'root',
@@ -17,117 +17,119 @@ export class GameService {
 
   constructor(private http: HttpClient) {}
 
-  addGame(formValue: gameForm) {
-    let token = localStorage.getItem('token');
-    let httpOptionsAuth = {
+  addGame(formValue: gameForm): Observable<game> {
+    const token = localStorage.getItem('token');
+    const httpOptionsAuth = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'X-Authorization': token || '',
       }),
     };
-    return this.http.post(`${this.URL}/games`, formValue, httpOptionsAuth);
-  }
-  deleteGame(id: string | null) {
-    let token = localStorage.getItem('token');
-    let httpOptionsAuth = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'X-Authorization': token || '',
-      }),
-    };
-    return this.http.delete(`${this.URL}/games/${id}`, httpOptionsAuth);
+    return this.http.post<game>(
+      `${this.URL}/games`,
+      formValue,
+      httpOptionsAuth
+    );
   }
 
-  editGame(id: string | null, formValue: any) {
-    let token = localStorage.getItem('token');
-    let httpOptionsAuth = {
+  deleteGame(id: string | null): Observable<game> {
+    const token = localStorage.getItem('token');
+    const httpOptionsAuth = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'X-Authorization': token || '',
       }),
     };
-    return this.http.put(`${this.URL}/games/${id}`, formValue, httpOptionsAuth);
+    return this.http.delete<game>(`${this.URL}/games/${id}`, httpOptionsAuth);
   }
 
-  likeGame(id: string | null) {
-    let token = localStorage.getItem('token');
-    let httpOptionsAuth = {
+  editGame(id: string | null, formValue: gameForm): Observable<gameForm> {
+    const token = localStorage.getItem('token');
+    const httpOptionsAuth = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'X-Authorization': token || '',
       }),
     };
-    return this.http.post(`${this.URL}/likes`, { id }, httpOptionsAuth);
+    return this.http.put<gameForm>(
+      `${this.URL}/games/${id}`,
+      formValue,
+      httpOptionsAuth
+    );
   }
 
-  getLikes(id: string | null) {
-    return this.http.get(
+  likeGame(id: string | null): Observable<like> {
+    const token = localStorage.getItem('token');
+    const httpOptionsAuth = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'X-Authorization': token || '',
+      }),
+    };
+    return this.http.post<like>(`${this.URL}/likes`, { id }, httpOptionsAuth);
+  }
+
+  getLikes(id: string | null): Observable<like[]> {
+    return this.http.get<like[]>(
       `${this.URL}/likes?where=id%3D%22${id}%22`,
       this.httpOptions
     );
   }
 
-  getLikesCount(id: string | null) {
-    return this.http.get(
+  getLikesCount(id: string | null): Observable<number> {
+    return this.http.get<number>(
       `${this.URL}/likes?where=id%3D%22${id}%22&count`,
       this.httpOptions
     );
   }
 
-  deleteLikeGame(id: string | null) {
-    let token = localStorage.getItem('token');
-    let httpOptionsAuth = {
+  deleteLikeGame(id: string | null): Observable<game> {
+    const token = localStorage.getItem('token');
+    const httpOptionsAuth = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'X-Authorization': token || '',
       }),
     };
-    return this.http.delete(`${this.URL}/likes/${id}`, httpOptionsAuth);
+    return this.http.delete<game>(`${this.URL}/likes/${id}`, httpOptionsAuth);
   }
 
-  getAllGames() {
-    return this.http.get(`${this.URL}/games`, this.httpOptions);
-  }
-  getCurrentGame(id: string | null) {
-    return this.http.get(`${this.URL}/games/${id}`, this.httpOptions);
+  getAllGames(): Observable<game[]> {
+    return this.http.get<game[]>(`${this.URL}/games`, this.httpOptions);
   }
 
-  getLatestFiveGames() {
-    return this.http.get(
+  getCurrentGame(id: string | null): Observable<game> {
+    return this.http.get<game>(`${this.URL}/games/${id}`, this.httpOptions);
+  }
+
+  getLatestFiveGames(): Observable<game[]> {
+    return this.http.get<game[]>(
       `${this.URL}/games?sortBy=_createdOn desc&pageSize=5`,
       this.httpOptions
     );
   }
 
   getMostPopular(topCount: number): Observable<{ [key: string]: number }> {
-    let games: any[] = [];
+    let games: game[] = [];
     let gamesIdAndLike: { [key: string]: number } = {};
 
     return new Observable((observer) => {
-      this.getAllGames().subscribe((data: any) => {
+      this.getAllGames().subscribe((data: game[]) => {
         games = data;
 
-        // Create an array of observables for each HTTP request
         const observables = games.map((game) => {
           return this.getLikesCount(game._id);
         });
 
-        // Wait for all HTTP requests to complete
-        forkJoin(observables).subscribe((likesData: any[]) => {
-          // Combine games with their corresponding likes count
+        forkJoin(observables).subscribe((likesData: number[]) => {
           games.forEach((game, index) => {
             gamesIdAndLike[game._id] = likesData[index];
           });
 
-          // Sort the games by likes count in descending order
           const sortedGamesArray = Object.entries(gamesIdAndLike).sort(
             (a, b) => b[1] - a[1]
           );
-
-          // Get the top N games
           const topGames = sortedGamesArray.slice(0, topCount);
-
-          // Convert top games array back to an object
           const topGamesObject = Object.fromEntries(topGames);
 
           observer.next(topGamesObject);
@@ -137,41 +139,50 @@ export class GameService {
     });
   }
 
-  getGamesByGenre(genre: string) {
-    return this.http.get(`${this.URL}/games?where=genre%3D%22${genre}%22`);
+  getGamesByGenre(genre: string): Observable<game[]> {
+    return this.http.get<game[]>(
+      `${this.URL}/games?where=genre%3D%22${genre}%22`
+    );
   }
 
-  addToCart(userId: string | null, game: any): Observable<any> {
-    debugger;
-    let token = localStorage.getItem('token');
+  addToCart(userId: string | null, game: any): Observable<cartGame> {
+    const token = localStorage.getItem('token');
     const httpOptionsAuth = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'X-Authorization': token || '',
       }),
     };
-    return this.http.post(`${this.URL}/${userId}`, game, httpOptionsAuth);
+    return this.http.post<cartGame>(
+      `${this.URL}/${userId}`,
+      game,
+      httpOptionsAuth
+    );
   }
 
-  deleteCartGame(id: string, user_id: string | null) {
-    let token = localStorage.getItem('token');
-    let httpOptionsAuth = {
+  deleteCartGame(id: string, user_id: string | null): Observable<cartGame> {
+    const token = localStorage.getItem('token');
+    const httpOptionsAuth = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'X-Authorization': token || '',
       }),
     };
-    return this.http.delete(`${this.URL}/${user_id}/${id}`, httpOptionsAuth);
+    return this.http.delete<cartGame>(
+      `${this.URL}/${user_id}/${id}`,
+      httpOptionsAuth
+    );
   }
 
-  getAllGamesByUser(user_id: string | null) {
-    return this.http.get(`${this.URL}/${user_id}`, this.httpOptions);
+  getAllGamesByUser(user_id: string | null): Observable<game[] | cartGame[]> {
+    return this.http.get<game[] | cartGame[]>(
+      `${this.URL}/${user_id}`,
+      this.httpOptions
+    );
   }
 
-  searchGame(searchParams: string | null) {
-    console.log(searchParams);
-
-    return this.http.get(
+  searchGame(searchParams: string | null): Observable<game[]> {
+    return this.http.get<game[]>(
       `${this.URL}/games?where=game_name%20LIKE%20%22${searchParams}%22`
     );
   }
