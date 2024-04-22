@@ -12,7 +12,6 @@ import { GameModule } from './game/game.module';
 import { GameRoutingModule } from './game/game-routing.module';
 import { ErrorComponent } from './error/error.component';
 import { SharedModule } from './shared/shared.module';
-import { GamesRowComponent } from './shared/games-row/games-row.component';
 
 @NgModule({
   declarations: [AppComponent, MainComponent, AboutComponent, ErrorComponent],
