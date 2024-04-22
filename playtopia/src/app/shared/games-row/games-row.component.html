@@ -1,10 +1,34 @@
-<div>
-  <ul class="other-games-row">
-    <li *ngFor="let game of games">
-      <a [routerLink]="'/details/' + game._id">
-        <img [src]="game.game_img" [alt]="game.game_name" />
-      </a>
-      <p>{{ game.game_name }}</p>
-    </li>
-  </ul>
-</div>
+<ul class="other-games-row">
+  <li *ngIf="!isLoaded">
+    <div class="loading-spinner">
+      <app-loader></app-loader>
+    </div>
+  </li>
+  <li *ngIf="!isLoaded">
+    <div class="loading-spinner">
+      <app-loader></app-loader>
+    </div>
+  </li>
+  <li *ngIf="!isLoaded">
+    <div class="loading-spinner">
+      <app-loader></app-loader>
+    </div>
+  </li>
+  <li *ngIf="!isLoaded">
+    <div class="loading-spinner">
+      <app-loader></app-loader>
+    </div>
+  </li>
+  <li *ngIf="!isLoaded">
+    <div class="loading-spinner">
+      <app-loader></app-loader>
+    </div>
+  </li>
+
+  <li *ngFor="let game of games">
+    <a [routerLink]="'/details/' + game._id">
+      <img [src]="game.game_img" [alt]="game.game_name" />
+    </a>
+    <p>{{ game.game_name }}</p>
+  </li>
+</ul>

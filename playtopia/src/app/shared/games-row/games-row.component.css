@@ -37,3 +37,6 @@ h6 {
   .other-games-row li img:hover {
     transform: scale(1.03);
   }
+  .loading-spinner{
+    margin-bottom: 60px;
+  }
