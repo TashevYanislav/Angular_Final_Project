@@ -10,6 +10,16 @@
 
   <div>
     <ul class="popular-games-row">
+      <li *ngIf="!isLoadedPupolarGames">
+        <app-popular-games-loader />
+      </li>
+      <li *ngIf="!isLoadedPupolarGames">
+        <app-popular-games-loader />
+      </li>
+      <li *ngIf="!isLoadedPupolarGames">
+        <app-popular-games-loader />
+      </li>
+
       <li *ngFor="let popularGame of popularGames">
         <a routerLink="/details/{{ popularGame._id }}">
           <img [src]="popularGame.game_img" [alt]="popularGame.game_name" />
@@ -23,5 +33,5 @@
     <h2>Latest Games</h2>
   </div>
 
-  <app-games-row [games]="latestGames"></app-games-row>
+  <app-games-row [games]="latestGames" [isLoaded]="isLoaded"></app-games-row>
 </main>
