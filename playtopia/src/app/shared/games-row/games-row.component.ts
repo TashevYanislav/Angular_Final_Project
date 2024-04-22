@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class GamesRowComponent {
   @Input() games: any[] = [];
+  @Input() isLoaded: boolean = false;
 }
