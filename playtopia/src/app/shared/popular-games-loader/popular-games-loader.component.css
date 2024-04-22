@@ -1,0 +1,19 @@
+.loader {
+  width: 400px;
+  height: 600px;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  border: 1px solid;
+  box-sizing: border-box;
+  animation: fill 2s linear infinite alternate;
+}
+
+@keyframes fill {
+  0% {
+    box-shadow: 0 0 inset;
+  }
+  100% {
+    box-shadow: 0 -600px inset;
+  }
+}
