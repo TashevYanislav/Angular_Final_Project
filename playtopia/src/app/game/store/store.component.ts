@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
+import { game } from 'src/app/types/game';
 
 @Component({
   selector: 'app-store',
@@ -7,7 +8,7 @@ import { GameService } from '../game.service';
   styleUrls: ['./store.component.css'],
 })
 export class StoreComponent implements OnInit {
-  games: any[] = [];
+  games: game[] = [];
   isLoaded: boolean = false; // Initialize isLoaded variable to false
 
   constructor(private gameService: GameService) {}

@@ -19,7 +19,7 @@ export class UserService {
       'Content-Type': 'application/json',
     }),
   };
-  register(data: RegisterData): Observable<any> {
+  register(data: RegisterData): Observable<onRegisterData> {
     return this.http
       .post<onRegisterData>(`${this.URL}/register`, data, this.httpOptions)
       .pipe(

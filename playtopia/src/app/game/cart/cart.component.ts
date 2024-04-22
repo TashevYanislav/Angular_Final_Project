@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
+import { cartGame } from 'src/app/types/game';
 
 @Component({
   selector: 'app-cart',
@@ -8,7 +9,7 @@ import { GameService } from '../game.service';
 })
 export class CartComponent implements OnInit {
   user_id: string | null = localStorage.getItem('user_id');
-  cartGames: any[] = [];
+  cartGames: cartGame[] = [];
   totalPrice: number = 0; // Initialize totalPrice
   constructor(private gameService: GameService) {}
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game/game.service';
 import { forkJoin } from 'rxjs';
+import { game } from '../types/game';
 
 @Component({
   selector: 'app-main',
@@ -8,8 +9,8 @@ import { forkJoin } from 'rxjs';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  latestGames: any[] = [];
-  popularGames: any[] = [];
+  latestGames: game[] = [];
+  popularGames: game[] = [];
   isLoaded: boolean = false;
   isLoadedPupolarGames: boolean = false;
 
@@ -27,7 +28,7 @@ export class MainComponent implements OnInit {
       const observables = gameIds.map((gameId) => {
         return this.gameService.getCurrentGame(gameId);
       });
-      forkJoin(observables).subscribe((gamesData: any[]) => {
+      forkJoin(observables).subscribe((gamesData: game[]) => {
         this.popularGames = gamesData;
         console.log('Popular popularGames', this.popularGames);
         this.isLoadedPupolarGames = true;

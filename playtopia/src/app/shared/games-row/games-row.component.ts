@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { game } from 'src/app/types/game';
 
 @Component({
   selector: 'app-games-row',
@@ -6,6 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./games-row.component.css'],
 })
 export class GamesRowComponent {
-  @Input() games: any[] = [];
+  @Input() games: game[] = [];
   @Input() isLoaded: boolean = false;
 }
