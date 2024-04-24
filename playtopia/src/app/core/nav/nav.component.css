@@ -48,3 +48,13 @@ nav ul li img:hover {
 nav ul li a:hover {
   color: black;
 }
+
+nav ul li img#cart {
+  width: 65px;
+}
+
+nav ul li img #cart:hover {
+  filter: invert(100%);
+  width: 65px;
+  margin-top: 0px; /* Adjust the margin-top value to position it lower */
+}

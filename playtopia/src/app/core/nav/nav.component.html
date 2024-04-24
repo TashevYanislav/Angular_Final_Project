@@ -18,7 +18,13 @@
       </div>
     </li>
     <li>
-      <a routerLink="/cart" *ngIf="userService.isLogedin()">Cart</a>
+      <a routerLink="/cart" *ngIf="userService.isLogedin()">
+        <img
+          id="cart"
+          src="../../../assets/shopping-cart-icon-illustration-free-vector.png"
+          alt="Cart"
+        />
+      </a>
     </li>
     <li>
       <a *ngIf="userService.isLogedin()" (click)="logoutHandler()">Logout</a>

@@ -9,9 +9,17 @@ import { authGuardNotLogged } from '../guards/auth.guard';
 
 const routes: Routes = [
   { path: 'store', component: StoreComponent },
-  { path: 'add_game', component: AddGameComponent },
+  {
+    path: 'add_game',
+    component: AddGameComponent,
+    canActivate: [authGuardNotLogged],
+  },
   { path: 'details/:id', component: DetailComponent },
-  { path: 'edit/:id', component: EditComponent },
+  {
+    path: 'edit/:id',
+    component: EditComponent,
+    canActivate: [authGuardNotLogged],
+  },
   { path: 'cart', component: CartComponent, canActivate: [authGuardNotLogged] },
 ];
 
