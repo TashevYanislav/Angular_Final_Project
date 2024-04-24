@@ -19,3 +19,13 @@ export const authGuard: CanActivateFn = (
 };
 
 
+export const authGuardNotLogged: CanActivateFn = (
+  route: ActivatedRouteSnapshot,
+  state: RouterStateSnapshot
+) => {
+  const router: Router = inject(Router);
+  const protectedRoutes: string[] = ['/add_game', '/cart'];
+  return protectedRoutes.includes(state.url) && !localStorage.getItem('token')
+    ? router.navigate(['/register'])
+    : true;
+};
