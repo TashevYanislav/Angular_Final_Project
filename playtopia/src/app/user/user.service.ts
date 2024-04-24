@@ -77,8 +77,6 @@ export class UserService {
     );
   }
   isLogedin() {
-    console.log();
-
     return this.isLogedInBool;
   }
 }
