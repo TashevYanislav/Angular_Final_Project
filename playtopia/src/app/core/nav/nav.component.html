@@ -29,5 +29,8 @@
     <li>
       <a *ngIf="userService.isLogedin()" (click)="logoutHandler()">Logout</a>
     </li>
+    <li>
+      <p>{{cartGamesCount}}</p>
+    </li>
   </ul>
 </nav>

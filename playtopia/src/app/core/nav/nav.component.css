@@ -27,6 +27,7 @@ nav ul {
 
 nav ul li {
   margin: 0 20px;
+  position: relative;
 }
 
 nav ul li a {
@@ -57,4 +58,15 @@ nav ul li img #cart:hover {
   filter: invert(100%);
   width: 65px;
   margin-top: 0px; /* Adjust the margin-top value to position it lower */
+}
+nav ul li p {
+  width: 15px;
+  position: absolute;
+  top: 10px; /* Adjust this value to position the count relative to the cart icon */
+  right: 195px; /* Adjust this value to position the count relative to the cart icon */
+  background-color: red; /* Adjust styles as needed */
+  color: white; /* Adjust styles as needed */
+  border-radius: 50%; /* Ensures the count appears in a circular shape */
+  padding: 5px 10px; /* Adjust padding as needed */
+  opacity: 0.8;
 }
