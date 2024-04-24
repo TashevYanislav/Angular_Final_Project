@@ -5,7 +5,6 @@ import {
   RouterStateSnapshot,
 } from '@angular/router';
 import { inject } from '@angular/core';
-import { UserService } from '../user/user.service';
 
 export const authGuard: CanActivateFn = (
   route: ActivatedRouteSnapshot,
@@ -17,7 +16,6 @@ export const authGuard: CanActivateFn = (
     ? router.navigate(['/'])
     : true;
 };
-
 
 export const authGuardNotLogged: CanActivateFn = (
   route: ActivatedRouteSnapshot,
