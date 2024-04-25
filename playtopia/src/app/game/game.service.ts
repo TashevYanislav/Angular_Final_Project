@@ -8,6 +8,7 @@ import { cartGame, game, gameForm, like } from '../types/game';
 })
 export class GameService {
   URL: string = 'http://localhost:3030/data';
+  cartGamesCount: number = 0;
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -187,6 +188,14 @@ export class GameService {
       this.httpOptions
     );
   }
+
+  // returnCartGamesCount(user_id: string | null) {
+  //   this.getCartGamesCount(user_id).subscribe((data) => {
+  //     this.cartGamesCount = data;
+  //   });
+
+  //   return this.cartGamesCount;
+  // }
 
   searchGame(searchParams: string | null): Observable<game[]> {
     return this.http.get<game[]>(

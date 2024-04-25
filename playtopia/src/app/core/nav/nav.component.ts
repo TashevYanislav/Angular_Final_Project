@@ -16,13 +16,19 @@ export class NavComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.gameService.getCartGamesCount(this.user_id).subscribe((data) => {
-      this.cartGamesCount = data;
-      console.log(`CART GAMES: ${this.cartGamesCount}`);
+    this.gameService.getCartGamesCount(this.user_id).subscribe((count) => {
+      this.cartGamesCount = count;
+      console.log(this.cartGamesCount);
     });
   }
 
   logoutHandler() {
     this.userService.logout();
   }
+  // displayCount(user_id: string) {
+  //   this.gameService.getCartGamesCount(user_id).subscribe((count) => {
+  //     this.cartGamesCount = count;
+  //     console.log(this.cartGamesCount);
+  //   });
+  // }
 }

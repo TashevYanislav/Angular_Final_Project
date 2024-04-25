@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { LoginData } from 'src/app/types/user';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { GameService } from 'src/app/game/game.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,11 @@ export class LoginComponent {
   user_id: string = '';
   errorMessage: string = '';
   @ViewChild('LoginForm', { static: false }) loginForm!: NgForm;
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private gameService: GameService
+  ) {}
 
   formSubmitHandler(form: NgForm) {
     if (form.invalid) {
@@ -46,5 +51,6 @@ export class LoginComponent {
         this.loginForm.reset();
       }
     );
+    // this.gameService.returnCartGamesCount(this.user_id);
   }
 }

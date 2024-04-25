@@ -6,6 +6,7 @@ import { emailValidator } from 'src/app/shared/utils/email.validator';
 import { EMAIL_DOMAINS } from 'src/app/constants';
 import { matchPasswordsValidator } from 'src/app/shared/utils/match-passwords-validator';
 import { Router } from '@angular/router';
+import { GameService } from 'src/app/game/game.service';
 
 @Component({
   selector: 'app-register',
@@ -19,7 +20,8 @@ export class RegisterComponent {
   constructor(
     private userService: UserService,
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private gameService: GameService
   ) {}
 
   registerForm = this.fb.group({
@@ -66,5 +68,6 @@ export class RegisterComponent {
         this.registerForm.reset();
       }
     );
+    // this.gameService.returnCartGamesCount(this.user_id);
   }
 }

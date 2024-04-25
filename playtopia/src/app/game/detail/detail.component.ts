@@ -3,6 +3,7 @@ import { GameService } from '../game.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { cartGame, game, like } from 'src/app/types/game';
 
+
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -91,6 +92,7 @@ export class DetailComponent implements OnInit {
         this.gameService
           .addToCart(this.user_id, currentGame)
           .subscribe(console.log);
+        // this.gameService.getCartGamesCount(this.user_id).subscribe(console.log);
       }
     }
   }
