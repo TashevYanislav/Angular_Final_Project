@@ -29,7 +29,7 @@
     <li>
       <a *ngIf="userService.isLogedin()" (click)="logoutHandler()">Logout</a>
     </li>
-    <li>
+    <li *ngIf="userService.isLogedin()">
       <p>{{cartGamesCount}}</p>
     </li>
   </ul>
