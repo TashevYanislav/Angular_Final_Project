@@ -60,7 +60,7 @@ nav ul li img #cart:hover {
   margin-top: 0px; /* Adjust the margin-top value to position it lower */
 }
 nav ul li p {
-  width: 15px;
+  width: 12px;
   position: absolute;
   top: 10px; /* Adjust this value to position the count relative to the cart icon */
   right: 195px; /* Adjust this value to position the count relative to the cart icon */
@@ -69,4 +69,5 @@ nav ul li p {
   border-radius: 50%; /* Ensures the count appears in a circular shape */
   padding: 5px 10px; /* Adjust padding as needed */
   opacity: 0.8;
+  pointer-events: none;
 }
