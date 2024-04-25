@@ -181,6 +181,13 @@ export class GameService {
     );
   }
 
+  getCartGamesCount(user_id: string | null): Observable<number> {
+    return this.http.get<number>(
+      `${this.URL}/${user_id}?count`,
+      this.httpOptions
+    );
+  }
+
   searchGame(searchParams: string | null): Observable<game[]> {
     return this.http.get<game[]>(
       `${this.URL}/games?where=game_name%20LIKE%20%22${searchParams}%22`
