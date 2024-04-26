@@ -13,7 +13,6 @@ export class AddGameComponent {
 
   formSubmitHandler(form: NgForm) {
     if (form.invalid) {
-      console.log('Form Invalid');
       form.reset();
       return;
     }

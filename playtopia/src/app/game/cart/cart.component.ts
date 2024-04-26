@@ -17,7 +17,6 @@ export class CartComponent implements OnInit {
     this.gameService.getAllGamesByUser(this.user_id).subscribe(
       (data: any) => {
         this.cartGames = data;
-        console.log(data);
         // Calculate total price after fetching data
         this.calculateTotalPrice();
       },
@@ -28,7 +27,6 @@ export class CartComponent implements OnInit {
   }
 
   onDeleteHandler(id: string) {
-    console.log('Clicked');
     this.gameService.deleteCartGame(id, this.user_id).subscribe(() => {
       this.gameService.getAllGamesByUser(this.user_id).subscribe(
         (data: any) => {
