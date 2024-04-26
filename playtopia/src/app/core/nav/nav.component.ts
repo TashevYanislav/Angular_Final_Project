@@ -24,10 +24,4 @@ export class NavComponent implements OnInit {
   logoutHandler() {
     this.userService.logout();
   }
-  // displayCount(user_id: string) {
-  //   this.gameService.getCartGamesCount(user_id).subscribe((count) => {
-  //     this.cartGamesCount = count;
-  //     console.log(this.cartGamesCount);
-  //   });
-  // }
 }

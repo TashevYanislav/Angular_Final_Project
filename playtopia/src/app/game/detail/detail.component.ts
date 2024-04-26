@@ -120,7 +120,7 @@ export class DetailComponent implements OnInit {
       if (data.length > 0) {
         this.cartGameId = data[0]._id;
         console.log(this.cartGameId);
-        
+
         this.isBought = true;
         console.log(this.isBought);
       } else {

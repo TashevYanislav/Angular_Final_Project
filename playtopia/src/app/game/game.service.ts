@@ -202,26 +202,7 @@ export class GameService {
     );
   }
 
-  getCartGameId(){
-    
-  }
-  // returnCartGamesCount(user_id: string | null) {
-  //   this.getCartGamesCount(user_id).subscribe((data) => {
-  //     this.cartGamesCount = data;
-  //   });
-
-  //   return this.cartGamesCount;
-  // }
-
-  // returnCartGame(user_id: string | null, cartGameId: string | null) {
-  //   return this.http
-  //     .get(`${this.URL}/${user_id}/${cartGameId}`, this.httpOptions)
-  //     .pipe(
-  //       catchError((error) => {
-  //         return [];
-  //       })
-  //     );
-  // }
+  
 
   searchGame(searchParams: string | null): Observable<game[]> {
     return this.http.get<game[]>(
