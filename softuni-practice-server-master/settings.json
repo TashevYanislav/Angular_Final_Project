@@ -147,6 +147,150 @@
                 "genre": "Sports",
                 "price": 19.99,
                 "_createdOn": 1712251995750
+            },
+            "3cf0c2ac-9e9b-40e8-bc99-c1b774160ffe": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Rocket League",
+                "game_img": "https://i.pinimg.com/564x/e1/37/d7/e137d7ffb0a8ea66e3087833a180be01.jpg",
+                "description": "In Rocket League, players control rocket-powered cars and use them to hit a large ball into the opposing team's goal to score points. The game features fast-paced gameplay, intuitive controls, and a variety of acrobatic maneuvers that allow players to perform impressive aerial stunts and shots.",
+                "genre": "Sports",
+                "price": 19.99,
+                "_createdOn": 1714128887280
+            },
+            "4f9915da-d5a2-498d-8028-70343f1dac22": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Madden 2024",
+                "game_img": "https://i.pinimg.com/564x/f7/ed/a4/f7eda4b36daa843a5fbf3290b47cfe16.jpg",
+                "description": "In Madden NFL games, players take control of their favorite NFL teams or create their own custom teams, competing against AI or other players in various game modes. The franchise is known for its realism, accurately depicting the strategies, tactics, and rules of American football.",
+                "genre": "Sports",
+                "price": 59.99,
+                "_createdOn": 1714129145135
+            },
+            "269620b6-6916-4004-8d57-0dfa533d9cd8": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Forza Horizon 5",
+                "game_img": "https://i.pinimg.com/564x/12/e0/c9/12e0c9c80a81c3423132cb532283b2e9.jpg",
+                "description": "\nForza Horizon 5 is the latest installment in the beloved open-world racing franchise developed by Playground Games and published by Xbox Game Studios. Set in the stunning and diverse landscapes of Mexico, this iteration of the game takes players on a thrilling journey through a vast and visually stunning open world.",
+                "genre": "Sports",
+                "price": 9.99,
+                "_createdOn": 1714129319424
+            },
+            "1e1539ed-a60f-4775-9359-38f29b2890d2": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Hearts of Iron IV",
+                "game_img": "https://i.pinimg.com/564x/93/02/ba/9302ba1f615c2845ccbf1a7873a5fa42.jpg",
+                "description": "In \"Hearts of Iron,\" players take on the role of a nation's leader during various historical periods, such as World War II. The gameplay typically involves managing resources, diplomacy, research, production, and military strategy to lead your chosen country to victory.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "genre": "Strategy",
+                "price": 29.99,
+                "_createdOn": 1714129698611
+            },
+            "69458507-1a1e-47e4-8a96-71ee6ff14929": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Dota 2",
+                "game_img": "https://i.pinimg.com/564x/09/1d/37/091d371866ebbc9b858ac76fe6d1c2f7.jpg",
+                "description": "\n\"Dota 2\" is a free-to-play multiplayer online battle arena (MOBA) game developed and published by Valve Corporation. It features intense team-based battles where players control powerful heroes with unique abilities, aiming to destroy the enemy team's base while defending their own. Players must work together, strategize, and adapt to overcome their opponents in fast-paced matches.",
+                "genre": "Strategy",
+                "price": 0.01,
+                "_createdOn": 1714129870708
+            },
+            "b28878fd-37bc-48ef-8838-ac70c507459f": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Baldur's Gate 3",
+                "game_img": "https://i.pinimg.com/564x/9a/96/25/9a96254021502bfa98c5ac37b1e78138.jpg",
+                "description": "\"Baldur's Gate\" is a classic role-playing game (RPG) set in the Dungeons & Dragons universe. Players create a custom character or choose from pre-made ones and embark on an epic journey across the Sword Coast. The game features tactical real-time combat, rich storytelling, and complex character development as players unravel a gripping narrative filled with intrigue, adventure, and memorable compa",
+                "genre": "Strategy",
+                "price": 59.99,
+                "_createdOn": 1714129978381
+            },
+            "e2006bce-74af-41aa-ab5e-5be6c473e192": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Sky: Children of the Light",
+                "game_img": "https://i.pinimg.com/564x/38/cc/e0/38cce048d46431483a1dce47dea9b846.jpg",
+                "description": "\n\"Sky: Children of the Light\" is an enchanting adventure game developed by Thatgamecompany. Players explore beautiful, dreamlike worlds filled with mysteries and wonders, solving puzzles, and uncovering secrets. The game emphasizes exploration, social interaction, and cooperation as players journey together to restore fallen constellations and bring light to darkened realms.",
+                "genre": "Puzzles",
+                "price": 10.99,
+                "_createdOn": 1714130170276
+            },
+            "6bca07df-0b1e-4b05-b280-e194186a30e4": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Plants vs. Zombies",
+                "game_img": "https://i.pinimg.com/564x/da/4f/0e/da4f0e15d73d71a5f463256abdc7c81c.jpg",
+                "description": "\n\"Plants vs. Zombies\" is a charming tower defense game developed by PopCap Games. Players defend their home from hordes of cartoonish zombies using an arsenal of quirky plants, each with unique abilities. Strategic placement and resource management are key as players progress through levels, unlocking new plants and encountering increasingly challenging zombie foes.",
+                "genre": "Puzzles",
+                "price": 5.99,
+                "_createdOn": 1714130300784
+            },
+            "f90aa720-278b-4866-9e1d-b3231a9c339a": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "It Takes Two",
+                "game_img": "https://i.pinimg.com/564x/15/a7/ab/15a7ab3111fa4254ae0e63c4a93205f9.jpg",
+                "description": "\"It Takes Two\" is a cooperative action-adventure game developed by Hazelight Studios. Players assume the roles of Cody and May, a couple turned into dolls by their daughter's magical tears. Together, they embark on a fantastical journey filled with puzzles, challenges, and platforming sequences, each designed to test their communication and cooperation.",
+                "genre": "Puzzles",
+                "price": 39.99,
+                "_createdOn": 1714130484835
+            },
+            "cf23613d-b76d-4bb5-906d-aee0fcfd2fb6": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Phasmophobia",
+                "game_img": "https://i.pinimg.com/564x/16/6e/49/166e4964de6e43a0ec93f6a0d0a0be7e.jpg",
+                "description": "\"Phasmophobia\" is a cooperative psychological horror game developed by Kinetic Games. Players take on the roles of paranormal investigators tasked with exploring haunted locations to gather evidence of supernatural activity. Using a variety of tools such as EMF meters, spirit boxes, and motion sensors, players must identify different types of ghosts while avoiding being hunted themselves.",
+                "genre": "Horror",
+                "price": 19.99,
+                "_createdOn": 1714130677478
+            },
+            "3d81c5a6-10cb-42c9-8567-352dc449d64a": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Dead by Daylight",
+                "game_img": "https://store-images.s-microsoft.com/image/apps.16719.64366672042187759.733004ed-c696-44cf-98cc-30eddf2375a8.3dd6c96e-e0c3-4a0b-aeb0-810f815a6d37",
+                "description": "\"Dead by Daylight\" is a multiplayer horror game developed by Behaviour Interactive. Players take on the roles of either survivors or killers in asymmetrical 4v1 matches. Survivors must work together to repair generators and escape the map, while the killer hunts them down and sacrifices them to a malevolent entity.",
+                "genre": "Horror",
+                "price": 19.99,
+                "_createdOn": 1714130837804
+            },
+            "58678550-82ff-4fb4-bf6e-ac4c06806b2e": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Resident Evil 4",
+                "game_img": "https://i.pinimg.com/564x/2d/d7/bb/2dd7bb0533e2b9c363160a38d9527039.jpg",
+                "description": "\"Resident Evil 4\" is a survival horror game developed by Capcom. Players assume the role of Leon S. Kennedy, a former police officer, as he embarks on a mission to rescue the President's daughter from a mysterious cult in a rural European village. The game combines intense action with atmospheric horror, featuring tense encounters with grotesque enemies and challenging puzzles.",
+                "genre": "Horror",
+                "price": 29.99,
+                "_createdOn": 1714130968032
+            },
+            "47227098-24c8-43ae-816f-a291ebfa6868": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Grand Theft Auto V",
+                "game_img": "https://i.pinimg.com/564x/4b/65/af/4b65af5f05779610c6b9f3786a699d89.jpg",
+                "description": "\"Grand Theft Auto V\" is an action-adventure game set in the fictional state of San Andreas. Players follow the lives of three criminals as they plan heists and navigate the criminal underworld. The game features a vast open world, various activities, and a multiplayer mode called Grand Theft Auto Online.",
+                "genre": "Action",
+                "price": 29.99,
+                "_createdOn": 1714131182443
+            },
+            "ba034b36-f422-46b2-9f54-e878356fb138": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Terraria",
+                "game_img": "https://i.pinimg.com/564x/38/9d/22/389d22790086f035c75cb484993ec955.jpg",
+                "description": "\n\"Terraria\" is a sandbox action-adventure game developed by Re-Logic. Players explore a randomly generated 2D world, mine resources, craft items, build structures, and fight various enemies and bosses. The game features a wide range of biomes, creatures, and items, offering endless possibilities for exploration and creativity.",
+                "genre": "Adventure",
+                "price": 9.99,
+                "_createdOn": 1714131320432
+            },
+            "d2baa5a9-c09e-44a3-a500-772185037e8a": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "FINAL FANTASY VII REMAKE",
+                "game_img": "https://i.pinimg.com/564x/8a/c3/d5/8ac3d58699e52a23f5a6409eb8a82e0d.jpg",
+                "description": "FINAL FANTASY VII REMAKE is a bold reimagining of the original FINAL FANTASY VII, originally released in 1997, developed under the guidance of the original key developers.\nThis critically-acclaimed game, which mixes traditional command-based combat and real-time action, makes its Steam debut along with FF7R EPISODE INTERmission─a new story arc featuring Yuffie Kisaragi.",
+                "genre": "Adventure",
+                "price": 49.99,
+                "_createdOn": 1714131635703
+            },
+            "5960485f-61e1-4917-b5d1-a1ed269f05bf": {
+                "_ownerId": "d0a943ce-6a0b-4368-8801-3db7fd1c70b7",
+                "game_name": "Counter-Strike 2",
+                "game_img": "https://i.pinimg.com/736x/a1/1e/d2/a11ed26ca672e8608bc05770a3cebd34.jpg",
+                "description": "\"Counter-Strike\" is a classic first-person shooter developed by Valve Corporation. Players engage in team-based matches as either terrorists or counter-terrorists, with objectives such as planting/defusing bombs or rescuing/hostage scenarios. The game emphasizes tactical gameplay, precise aiming, and teamwork.",
+                "genre": "Action",
+                "price": 0.01,
+                "_createdOn": 1714131771402
             }
         },
         "recipes": {
