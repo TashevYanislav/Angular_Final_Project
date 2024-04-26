@@ -3,7 +3,6 @@ import { GameService } from '../game.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { cartGame, game, like } from 'src/app/types/game';
 
-
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -14,7 +13,9 @@ export class DetailComponent implements OnInit {
   user_id: string | null = localStorage.getItem('user_id');
   id: string | null = this.activeRoute.snapshot.paramMap.get('id');
   isLiked = false;
+  isBought: boolean = false;
   like_id: string | null = '';
+  cartGameId: string | null = '';
 
   likesCount = 0;
 
@@ -43,6 +44,10 @@ export class DetailComponent implements OnInit {
       .subscribe((data: game[] | cartGame[]) => {
         this.isLiked = data.some((game) => game._ownerId === this.user_id);
       });
+
+    this.refreshCart();
+
+    // this.gameService.returnCartGame(this.user_id, this.cartGameId);
   }
 
   DeleteHandler(): void {
@@ -91,9 +96,37 @@ export class DetailComponent implements OnInit {
       if (this.user_id) {
         this.gameService
           .addToCart(this.user_id, currentGame)
-          .subscribe(console.log);
-        // this.gameService.getCartGamesCount(this.user_id).subscribe(console.log);
+          .subscribe((cartGame) => {
+            this.cartGameId = cartGame._id;
+            console.log(this.cartGameId);
+            this.refreshCart();
+          });
       }
     }
+  }
+  removeFromCartHandler() {
+    if (this.user_id) {
+      this.gameService
+        .deleteCartGame(this.cartGameId, this.user_id)
+        .subscribe((data) => {
+          this.isBought = false;
+          this.refreshCart();
+        });
+      // this.gameService.getCartGamesCount(this.user_id).subscribe(console.log);
+    }
+  }
+  refreshCart() {
+    this.gameService.getCartGame(this.user_id, this.id).subscribe((data) => {
+      if (data.length > 0) {
+        this.cartGameId = data[0]._id;
+        console.log(this.cartGameId);
+        
+        this.isBought = true;
+        console.log(this.isBought);
+      } else {
+        this.isBought = false;
+        console.log(this.isBought);
+      }
+    });
   }
 }

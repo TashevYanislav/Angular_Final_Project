@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, forkJoin } from 'rxjs';
+import { Observable, catchError, forkJoin, of } from 'rxjs';
 import { cartGame, game, gameForm, like } from '../types/game';
 
 @Injectable({
@@ -161,7 +161,10 @@ export class GameService {
     );
   }
 
-  deleteCartGame(id: string, user_id: string | null): Observable<cartGame> {
+  deleteCartGame(
+    id: string | null,
+    user_id: string | null
+  ): Observable<cartGame> {
     const token = localStorage.getItem('token');
     const httpOptionsAuth = {
       headers: new HttpHeaders({
@@ -189,12 +192,35 @@ export class GameService {
     );
   }
 
+  getCartGame(
+    user_id: string | null,
+    detailGameId: string | null
+  ): Observable<cartGame[]> {
+    return this.http.get<cartGame[]>(
+      `${this.URL}/${user_id}?where=details_id%3D%22${detailGameId}%22`,
+      this.httpOptions
+    );
+  }
+
+  getCartGameId(){
+    
+  }
   // returnCartGamesCount(user_id: string | null) {
   //   this.getCartGamesCount(user_id).subscribe((data) => {
   //     this.cartGamesCount = data;
   //   });
 
   //   return this.cartGamesCount;
+  // }
+
+  // returnCartGame(user_id: string | null, cartGameId: string | null) {
+  //   return this.http
+  //     .get(`${this.URL}/${user_id}/${cartGameId}`, this.httpOptions)
+  //     .pipe(
+  //       catchError((error) => {
+  //         return [];
+  //       })
+  //     );
   // }
 
   searchGame(searchParams: string | null): Observable<game[]> {
