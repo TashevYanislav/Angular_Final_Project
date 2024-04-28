@@ -18,7 +18,6 @@ export class EditComponent implements OnInit {
   game: any | null = {};
 
   ngOnInit(): void {
-    console.log(this.id);
     this.gameService.getCurrentGame(this.id).subscribe((data) => {
       this.game = data;
     });
@@ -26,7 +25,6 @@ export class EditComponent implements OnInit {
 
   formSubmitHandler(form: NgForm) {
     if (form.invalid) {
-      console.log('Form Invalid');
       form.reset();
       return;
     }

@@ -98,7 +98,6 @@ export class DetailComponent implements OnInit {
           .addToCart(this.user_id, currentGame)
           .subscribe((cartGame) => {
             this.cartGameId = cartGame._id;
-            console.log(this.cartGameId);
             this.refreshCart();
           });
       }
@@ -112,20 +111,15 @@ export class DetailComponent implements OnInit {
           this.isBought = false;
           this.refreshCart();
         });
-      // this.gameService.getCartGamesCount(this.user_id).subscribe(console.log);
     }
   }
   refreshCart() {
     this.gameService.getCartGame(this.user_id, this.id).subscribe((data) => {
       if (data.length > 0) {
         this.cartGameId = data[0]._id;
-        console.log(this.cartGameId);
-
         this.isBought = true;
-        console.log(this.isBought);
       } else {
         this.isBought = false;
-        console.log(this.isBought);
       }
     });
   }

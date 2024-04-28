@@ -24,7 +24,6 @@ export class UserService {
       .post<onRegisterData>(`${this.URL}/register`, data, this.httpOptions)
       .pipe(
         tap(() => {
-          console.log('Registration successful');
           this.isLogedInBool = true; // Update isLogedInBool upon successful registration
         }),
         catchError((error) => {
@@ -38,7 +37,6 @@ export class UserService {
       .post<onRegisterData>(`${this.URL}/login`, data, this.httpOptions)
       .pipe(
         tap(() => {
-          console.log('Registration successful');
           this.isLogedInBool = true; // Update isLogedInBool upon successful registration
         }),
         catchError((error) => {
@@ -64,7 +62,6 @@ export class UserService {
 
     return this.http.get(`${this.URL}/logout`, httpOptions).subscribe(
       () => {
-        console.log('Logout successful');
         localStorage.removeItem('token');
         localStorage.removeItem('user_id');
         this.isLogedInBool = false;

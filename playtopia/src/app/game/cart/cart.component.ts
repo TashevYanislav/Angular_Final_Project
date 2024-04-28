@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
-import { cartGame } from 'src/app/types/game';
+import { cartGame, game } from 'src/app/types/game';
 
 @Component({
   selector: 'app-cart',

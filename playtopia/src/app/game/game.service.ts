@@ -202,8 +202,6 @@ export class GameService {
     );
   }
 
-  
-
   searchGame(searchParams: string | null): Observable<game[]> {
     return this.http.get<game[]>(
       `${this.URL}/games?where=game_name%20LIKE%20%22${searchParams}%22`

@@ -23,7 +23,6 @@ export class LoginComponent {
 
   formSubmitHandler(form: NgForm) {
     if (form.invalid) {
-      console.log('Form Invalid');
       form.reset();
       return;
     }
@@ -33,13 +32,9 @@ export class LoginComponent {
       password: password,
     };
 
-    console.log(form.value);
-
     this.userService.login(data).subscribe(
       (response) => {
-        console.log('POST request was successful', response);
         this.token = response.accessToken;
-        console.log(this.token);
         localStorage.setItem('token', this.token);
         this.user_id = response._id;
         localStorage.setItem('user_id', this.user_id);

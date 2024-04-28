@@ -54,7 +54,6 @@ export class RegisterComponent {
 
     this.userService.register(data).subscribe(
       (response) => {
-        console.log('POST request was successful', response);
         this.token = response.accessToken;
         localStorage.setItem('token', this.token);
         this.user_id = response._id;

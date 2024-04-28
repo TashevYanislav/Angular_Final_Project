@@ -19,7 +19,7 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.isLoaded = false;
     this.isLoadedPupolarGames = false;
-    this.gameService.getLatestFiveGames().subscribe((data: any) => {
+    this.gameService.getLatestFiveGames().subscribe((data: game[]) => {
       this.latestGames = data;
       this.isLoaded = true;
     });
@@ -30,7 +30,6 @@ export class MainComponent implements OnInit {
       });
       forkJoin(observables).subscribe((gamesData: game[]) => {
         this.popularGames = gamesData;
-        console.log('Popular popularGames', this.popularGames);
         this.isLoadedPupolarGames = true;
       });
     });

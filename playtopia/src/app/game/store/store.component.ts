@@ -21,7 +21,7 @@ export class StoreComponent implements OnInit {
     this.games = [];
     this.isLoaded = false; // Set isLoaded to false before loading data
     this.gameService.getAllGames().subscribe(
-      (data: any) => {
+      (data: game[]) => {
         this.games = data;
         this.isLoaded = true; // Update isLoaded to true after data is loaded
       },
@@ -40,7 +40,7 @@ export class StoreComponent implements OnInit {
     this.games = [];
     this.isLoaded = false; // Set isLoaded to false before loading data
     this.gameService.getGamesByGenre(genre).subscribe(
-      (data: any) => {
+      (data: game[]) => {
         this.games = data;
         // Assign data to this.games first
         this.isLoaded = true; // Then set isLoaded to true after data is loaded
@@ -56,7 +56,7 @@ export class StoreComponent implements OnInit {
     this.games = [];
     this.isLoaded = false; // Set isLoaded to false before loading data
     this.gameService.searchGame(searchParams).subscribe(
-      (data: any) => {
+      (data: game[]) => {
         this.games = data;
         // Assign data to this.games first
         this.isLoaded = true; // Then set isLoaded to true after data is loaded
