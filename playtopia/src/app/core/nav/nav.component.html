@@ -5,20 +5,26 @@
     </a>
   </div>
   <ul class="right-items">
-    <li><a routerLink="/store">Store</a></li>
-    <li *ngIf="userService.isLogedin()">
-      <a routerLink="/add_game">Add Game</a>
+    <li>
+      <a [routerLinkActive]="'active'" routerLink="/store">Store</a>
     </li>
-    <li><a routerLink="/about">About</a></li>
+    <li *ngIf="userService.isLogedin()">
+      <a [routerLinkActive]="'active'" routerLink="/add_game">Add Game</a>
+    </li>
+    <li><a [routerLinkActive]="'active'" routerLink="/about">About</a></li>
     <li>
       <div *ngIf="!userService.isLogedin()">
-        <a routerLink="/register">
+        <a [routerLinkActive]="'activeImg'" routerLink="/register">
           <img src="../../../assets/Profile Img nav.png" alt="Profile" />
         </a>
       </div>
     </li>
     <li>
-      <a routerLink="/cart" *ngIf="userService.isLogedin()">
+      <a
+        [routerLinkActive]="'activeImg'"
+        routerLink="/cart"
+        *ngIf="userService.isLogedin()"
+      >
         <img
           id="cart"
           src="../../../assets/shopping-cart-icon-illustration-free-vector.png"
@@ -29,8 +35,8 @@
     <li>
       <a *ngIf="userService.isLogedin()" (click)="logoutHandler()">Logout</a>
     </li>
-    <li *ngIf="userService.isLogedin()">
-      <p>{{cartGamesCount}}</p>
-    </li>
+    <!-- <li *ngIf="userService.isLogedin()">
+      <p>{{ cartGamesCount }}</p>
+    </li> -->
   </ul>
 </nav>

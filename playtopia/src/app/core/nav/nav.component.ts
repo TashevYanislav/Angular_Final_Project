@@ -16,9 +16,9 @@ export class NavComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.gameService.getCartGamesCount(this.user_id).subscribe((count) => {
-      this.cartGamesCount = count;
-    });
+    // this.gameService.getCartGamesCount(this.user_id).subscribe((count) => {
+    //   this.cartGamesCount = count;
+    // });
   }
 
   logoutHandler() {

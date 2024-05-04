@@ -8,6 +8,9 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+a {
+  color: #fff;
+}
 
 nav .left-item {
   margin-right: auto;
@@ -31,11 +34,16 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
   text-decoration: none;
   font-size: 30px;
   font-family: "Agbalumo", system-ui;
   cursor: pointer;
+}
+.active {
+  color: black;
+}
+.activeImg {
+  filter: invert(100%);
 }
 nav ul li img {
   filter: invert(100%);
@@ -46,13 +54,8 @@ nav ul li img:hover {
   filter: invert(0%);
 }
 
-nav ul li a:hover {
-  color: black;
-}
-
 nav ul li img#cart {
   width: 65px;
-  
 }
 
 nav ul li img #cart:hover {
@@ -71,4 +74,8 @@ nav ul li p {
   padding: 5px 10px; /* Adjust padding as needed */
   opacity: 0.8;
   pointer-events: none;
+}
+
+nav ul li a:hover {
+  color: black;
 }
