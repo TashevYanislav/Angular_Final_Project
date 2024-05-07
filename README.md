@@ -10,9 +10,11 @@ GameStore is a web application designed to provide users with a seamless experie
 
 - **User Authentication**: Users can register for an account and login to access the platform's user features.
 - **Game Management**: Registered users have the ability to create new games, edit existing ones, and delete games they no longer wish to sell.
-- **Shopping Cart**: Users can add games to their shopping cart, as well as remove games they no longer wish to purchase.
+- **Shopping Cart**: Users can add games to their shopping cart, as well as remove games they no longer wish to purchase, the cart sums the sum of fall items and displays it below.
 - **Game Liking**: Users can express their interest in games by liking them, allowing for personalized recommendations and social interaction.
 - **Game Store**: The platform features a game store with filters for different genres and a search engine, making it easy for users to discover new games based on their preferences.
+- **Home Page Game Display**: Home Page Displayes The 3 most Popular Games(with the most likes from users), and the newest added games.
+- 
 
 ## Purpose 🎯🔍
 
@@ -39,3 +41,62 @@ The primary goal of GameStore is to provide a practical application for applying
 6️⃣  **Run the command `npm start` to start the backend server.** 🏃‍♂️🚀  
 
 Now you should have both the Angular app and the backend server running locally on your machine.
+
+## Recomentions 📋❗
+
+### Use Google Chrome Browser
+### Zoom = 100% 
+### Don't reload the page (This will sing off the user)
+
+
+## App Screenshots 📺📸
+
+### Home Page 🏠
+
+<img src="https://github.com/TashevYanislav/Angular_Final_Project/assets/120488299/94661b68-89ba-4fe0-b720-b3afb8388793" alt="Home Page" width="300">
+
+### Store Page 🛒
+
+<img src="https://github.com/TashevYanislav/Angular_Final_Project/assets/120488299/794ca117-8e4f-4747-b938-71bf893c37e8" alt="Store Page" width="300">
+
+### About Page ℹ
+
+<img src="https://github.com/TashevYanislav/Angular_Final_Project/assets/120488299/cac8ef33-d679-4cf1-bf84-3cab32456528" alt="About Page" width="300">
+
+### Register Page 📝
+
+<img src="https://github.com/TashevYanislav/Angular_Final_Project/assets/120488299/fc886295-8d5f-4d6c-976c-ca4d830f0b1a" alt="Register Page" width="300">
+
+### Login Page 🔑
+
+<img src="https://github.com/TashevYanislav/Angular_Final_Project/assets/120488299/752c56e2-8f9b-4b90-a0e5-91f805d9f72b" alt="Login Page" width="300">
+
+### Add Game Page ➕
+
+<img src="https://github.com/TashevYanislav/Angular_Final_Project/assets/120488299/31e00838-c5a7-4b62-9f73-5198fe92c7b3" alt="Add Game Page" width="300">
+
+### Game Details Page 🎮ℹ️
+
+<img src="https://github.com/TashevYanislav/Angular_Final_Project/assets/120488299/39b8f3e4-06b6-4dd9-bbf0-a2c990ce5c3e" alt="Game Details Page" width="300">
+
+### Edit Game Page 🎮✏️
+
+<img src="https://github.com/TashevYanislav/Angular_Final_Project/assets/120488299/b9df286b-f088-418d-bc71-66bc003b3eb7" alt="Edit Game Page" width="300">
+
+### My Cart Page 👤🛒
+
+<img src="https://github.com/TashevYanislav/Angular_Final_Project/assets/120488299/8fb4ae04-3af4-466a-a275-3ed185559a1a" alt="My Cart Page" width="300">
+
+## Future Changes
+
+### Some CSS changes to make it look better
+
+### Add shopping items cont in nav
+
+### Add canActivate Auth
+
+### Make reload not affect the log off the user
+
+### Add Comment Func 
+
+### Add User Profile
