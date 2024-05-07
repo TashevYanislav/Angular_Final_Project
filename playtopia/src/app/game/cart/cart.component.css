@@ -86,3 +86,6 @@ button:hover {
 .empty_cart {
   margin: 80px; /* Adjusted for 100% zoom */
 }
+#noItemsImg{
+  width: 300px;
+}
