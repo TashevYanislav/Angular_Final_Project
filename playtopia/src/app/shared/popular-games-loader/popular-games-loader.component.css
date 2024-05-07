@@ -1,6 +1,7 @@
 .loader {
-  width: 400px;
-  height: 600px;
+  border-radius: 20px;
+  width: 320px; /* Adjusted width */
+  height: 480px; /* Adjusted height */
   display: inline-block;
   position: relative;
   color: #fff;

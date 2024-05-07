@@ -1,16 +1,15 @@
 p {
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 2px 0 #fff,
-    1px 1px 0 #fff;
+  text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 1px 0 #fff, 0.5px 0.5px 0 #fff;
   color: #000000;
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 24px; /* Adjusted for 100% zoom */
+  margin-bottom: 8px; /* Adjusted for 100% zoom */
 }
+
 h2 {
-  font-size: 70px;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 2px 0 #fff,
-    1px 1px 0 #fff;
+  font-size: 56px; /* Adjusted for 100% zoom */
+  text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 1px 0 #fff, 0.5px 0.5px 0 #fff;
   color: #000000;
-  margin: 10px 0px 70px;
+  margin: 8px 0px 56px; /* Adjusted for 100% zoom */
 }
 
 .cart {
@@ -30,17 +29,19 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 24px; /* Adjusted for 100% zoom */
 }
-.total{
-    display: flex;
-    justify-content: center;
+
+.total {
+  display: flex;
+  justify-content: center;
 }
 
 .img_div img {
-  width: 250px;
-  margin: 50px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 1);
+  border-radius: 20px;
+  width: 200px; /* Adjusted for 100% zoom */
+  margin: 40px; /* Adjusted for 100% zoom */
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 1); /* Adjusted for 100% zoom */
   transition: transform 0.5s ease;
   object-fit: cover;
   object-position: center top;
@@ -55,34 +56,33 @@ header {
   display: flex;
   flex-direction: column;
   align-items: end;
-  padding: 60px;
+  padding: 48px; /* Adjusted for 100% zoom */
 }
+
 hr {
-  width: 95%; /* Set the width to 50% of its container */
+  width: 90%; /* Adjusted for 100% zoom */
   margin: 0 auto; /* Center the hr horizontally */
   border: 1px solid white; /* Remove the default border */
 }
 
 button {
-  margin: 10px 10px 0px 0px;
-  font-size: 30px;
-  border: 5px solid rgb(0, 0, 0);
-  border-radius: 20px;
+  margin: 8px 8px 0px 0px; /* Adjusted for 100% zoom */
+  font-size: 24px; /* Adjusted for 100% zoom */
+  border: 4px solid rgb(0, 0, 0); /* Adjusted for 100% zoom */
+  border-radius: 16px; /* Adjusted for 100% zoom */
   background-color: #3c5d61;
   color: rgb(255, 255, 255);
   font-family: "Bevan", serif;
-  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 4px 0 #000,
-    2px 2px 0 #000;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 4px 0 #000, 2px 2px 0 #000;
 }
 
 button:hover {
-  border: 5px solid white;
-  text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 4px 0 #ffffff,
-    2px 2px 0 #ffffff;
+  border: 4px solid white; /* Adjusted for 100% zoom */
+  text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 4px 0 #ffffff, 2px 2px 0 #ffffff;
   color: #000000;
   cursor: pointer;
 }
 
-.empty_cart{
-  margin: 104px;
+.empty_cart {
+  margin: 80px; /* Adjusted for 100% zoom */
 }

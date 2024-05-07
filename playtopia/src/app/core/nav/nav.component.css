@@ -1,5 +1,4 @@
 nav {
-  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
@@ -8,6 +7,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+
 a {
   color: #fff;
 }
@@ -17,7 +17,7 @@ nav .left-item {
 }
 
 .left-item img {
-  width: 120px;
+  width: 100px; /* Adjusted for 100% zoom */
   cursor: pointer;
 }
 
@@ -29,49 +29,52 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 20px;
+  margin: 0 15px; /* Adjusted for 100% zoom */
   position: relative;
 }
 
 nav ul li a {
   text-decoration: none;
-  font-size: 30px;
+  font-size: 24px; /* Adjusted for 100% zoom */
   font-family: "Agbalumo", system-ui;
   cursor: pointer;
 }
+
 .active {
   color: black;
 }
+
 .activeImg {
   filter: invert(100%);
 }
+
 nav ul li img {
   filter: invert(100%);
-  width: 50px;
+  width: 40px; /* Adjusted for 100% zoom */
 }
+
 nav ul li img:hover {
   cursor: pointer;
   filter: invert(0%);
 }
 
 nav ul li img#cart {
-  width: 65px;
+  width: 50px; /* Adjusted for 100% zoom */
 }
 
 nav ul li img #cart:hover {
   filter: invert(100%);
-  width: 65px;
-  margin-top: 0px; /* Adjust the margin-top value to position it lower */
 }
+
 nav ul li p {
-  width: 12px;
+  width: 10px; /* Adjusted for 100% zoom */
   position: absolute;
-  top: 10px; /* Adjust this value to position the count relative to the cart icon */
-  right: 195px; /* Adjust this value to position the count relative to the cart icon */
-  background-color: red; /* Adjust styles as needed */
-  color: white; /* Adjust styles as needed */
-  border-radius: 50%; /* Ensures the count appears in a circular shape */
-  padding: 5px 10px; /* Adjust padding as needed */
+  top: 8px; /* Adjusted for 100% zoom */
+  right: 180px; /* Adjusted for 100% zoom */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px; /* Adjusted for 100% zoom */
   opacity: 0.8;
   pointer-events: none;
 }

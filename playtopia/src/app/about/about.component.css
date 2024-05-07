@@ -13,14 +13,14 @@ main {
 }
 
 .about_container img {
-  width: 700px;
-  margin: 80px 100px 100px 200px;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+  width: 560px; /* Reduced for 100% zoom */
+  margin: 64px 80px 80px 160px; /* Reduced for 100% zoom */
+  box-shadow: 0 0 80px rgba(0, 0, 0, 1); /* Reduced for 100% zoom */
 }
 
 .about_container div {
-  margin: 250px 100px 100px 0px;
-  font-size: 25px;
+  margin: 200px 80px 80px 0; /* Reduced for 100% zoom */
+  font-size: 20px; /* Reduced for 100% zoom */
   position: relative;
   color: whitesmoke;
 }
@@ -28,13 +28,14 @@ main {
 .article {
   display: flex;
   position: absolute;
-  top: 10px; /* Adjust as needed */
-  left: 50.8%; /* Adjust as needed */
+  top: 8px; /* Adjusted for 100% zoom */
+  left: 50.9%; /* Adjusted for 100% zoom */
   transform: translateX(-35%);
   z-index: 1;
-  font-size: 200px; /* No space between 100 and px */
+  font-size: 160px; /* Reduced for 100% zoom */
   color: white; /* Ensuring text is visible */
 }
+
 
 .article :first-child {
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 4px 0 #000,

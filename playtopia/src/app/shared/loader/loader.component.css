@@ -1,13 +1,13 @@
 .loader {
-  width: 300px;
-  height: 300px;
+  border-radius: 10px;
+  width: 240px; /* Adjusted width */
+  height: 240px; /* Adjusted height */
   display: inline-block;
   position: relative;
   color: #FFF;
   border: 1px solid;
   box-sizing: border-box;
   animation: fill 2s linear infinite alternate;
-  
 }
 
 @keyframes fill {

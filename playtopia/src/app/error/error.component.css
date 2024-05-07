@@ -9,31 +9,32 @@ body {
 }
 
 .about_container img {
-  width: 700px;
-  margin: 80px 100px 100px 200px;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+  width: 525px; /* Adjusted for 100% zoom */
+  margin: 64px 80px 80px 160px; /* Adjusted for 100% zoom */
+  box-shadow: 0 0 80px rgba(0, 0, 0, 1); /* Adjusted for 100% zoom */
 }
 
 .about_container div {
-  margin: 50px 100px 100px 0px;
-  font-size: 40px;
+  margin: 32px 80px 80px 0px; /* Adjusted for 100% zoom */
+  font-size: 32px; /* Adjusted for 100% zoom */
   color: whitesmoke;
 }
 
 button {
-  margin-top: 20px;
-  font-size: 40px;
-  border: 5px solid rgb(0, 0, 0);
-  border-radius: 20px;
+  margin-top: 16px; /* Adjusted for 100% zoom */
+  font-size: 32px; /* Adjusted for 100% zoom */
+  border: 4px solid rgb(0, 0, 0); /* Adjusted for 100% zoom */
+  border-radius: 16px; /* Adjusted for 100% zoom */
   background-color: #3c5d61;
   color: rgb(255, 255, 255);
-  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 4px 0 #000,
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 4px 0 #000,
     2px 2px 0 #000;
 }
+
 button:hover {
-  border: 5px solid white;
-  text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 4px 0 #ffffff,
-    2px 2px 0 #ffffff;
+  border: 4px solid white; /* Adjusted for 100% zoom */
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 2px 0 #ffffff,
+    1px 1px 0 #ffffff;
   color: #000000;
   cursor: pointer;
 }

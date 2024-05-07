@@ -52,12 +52,14 @@ h6 {
 }
 
 .popular-games-row li img {
-  width: 400px;
-  height: 600px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 1);
-  margin-bottom: 30px;
+  border-radius: 20px;
+  width: 320px; /* Adjusted width */
+  height: 480px; /* Adjusted height */
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8); /* Adjusted box shadow */
+  margin-bottom: 24px; /* Adjusted margin */
   transition: transform 0.5s ease;
 }
+
 .popular-games-row li img:hover {
   transform: scale(1.03);
 }
