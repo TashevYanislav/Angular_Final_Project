@@ -39,3 +39,28 @@ The primary goal of GameStore is to provide a practical application for applying
 6️⃣  **Run the command `npm start` to start the backend server.** 🏃‍♂️🚀  
 
 Now you should have both the Angular app and the backend server running locally on your machine.
+
+
+
+## App Screenshots
+
+
+### Home Page
+
+
+### Store Page
+
+### About Page
+
+### Register Page
+
+### Login Page
+
+### Add Game Page
+
+### Game Details Page
+
+
+### Edit Game Page
+
+### My Cart Page
