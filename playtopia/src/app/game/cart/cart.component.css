@@ -27,8 +27,7 @@ header {
 
 .item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items:center;
   padding: 24px; /* Adjusted for 100% zoom */
 }
 
