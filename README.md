@@ -85,7 +85,7 @@ Now you should have both the Angular app and the backend server running locally 
 
 ### My Cart Page 👤🛒
 
-<img src="https://github.com/TashevYanislav/Angular_Final_Project/assets/120488299/8fb4ae04-3af4-466a-a275-3ed185559a1a" alt="My Cart Page" width="300">
+<img src="https://github.com/TashevYanislav/Angular_Final_Project/assets/120488299/95789420-6489-4249-9cb5-78f0eb238fdb" alt="My Cart Page" width="300">
 
 ## Future Changes
 
