@@ -38,6 +38,9 @@ body {
   border-radius: 8px; /* Reduced border-radius */
   border: none;
 }
+.search_panel p{
+  margin-top: 5px;
+} 
 
 .search_panel button {
   width: 40px; /* Reduced button width */
@@ -95,9 +98,10 @@ body {
 }
 .search_bar input {
   color: white;
-  margin:8px 5px 10px 2px;
 }
 
+
 i img{
-  width: 25px;
+  width: 17px;
+  
 }
