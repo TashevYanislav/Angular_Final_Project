@@ -14,6 +14,6 @@ import { ModalComponent } from './modal/modal.component';
     ModalComponent,
   ],
   imports: [CommonModule, RouterModule],
-  exports: [GamesRowComponent, PopularGamesLoaderComponent],
+  exports: [GamesRowComponent, PopularGamesLoaderComponent,ModalComponent],
 })
 export class SharedModule {}

@@ -1,0 +1,54 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  animation: fadeInModal 1.5s ease;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../../../assets/BackGroud.png");
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 1)
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+
+button {
+  font-size: 32px; /* Adjusted for 100% zoom */
+  border: 4px solid rgb(0, 0, 0); /* Adjusted for 100% zoom */
+  border-radius: 16px; /* Adjusted for 100% zoom */
+  background-color: #3c5d61;
+  color: rgb(255, 255, 255);
+  font-family: "Bevan", serif;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 4px 0 #000,
+    2px 2px 0 #000;
+}
+button:hover {
+  border: 4px solid white; /* Adjusted for 100% zoom */
+  text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 4px 0 #ffffff,
+    2px 2px 0 #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+p {
+  text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 1px 0 #fff,
+    0.5px 0.5px 0 #fff;
+  color: #000000;
+  font-size: 26px; /* Adjusted for 100% zoom */
+  margin-bottom: 8px; /* Adjusted for 100% zoom */
+}
+@keyframes fadeInModal {
+    from {
+      opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+      opacity: 1; /* Fade in to full opacity */
+    }
+  }
