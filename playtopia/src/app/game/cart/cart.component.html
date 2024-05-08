@@ -11,7 +11,7 @@
         </a>
       </div>
       <div class="info">
-        <p>{{ cartGame.gameName }}</p>
+        <p>{{ cartGame.gameName | slice:0:22 }}{{ cartGame.gameName.length > 22 ? '...' : '' }}</p>
         <p>Price: {{ cartGame.gamePrice }} $</p>
         <button (click)="onDeleteHandler(cartGame._id)">Delete</button>
       </div>

@@ -52,10 +52,11 @@ header {
 }
 
 .info {
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: end;
-  padding: 48px; /* Adjusted for 100% zoom */
+  padding: 48px 48px 48px 0px; /* Adjusted for 100% zoom */
 }
 
 hr {
