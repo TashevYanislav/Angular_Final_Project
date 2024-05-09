@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
-import { cartGame, game } from 'src/app/types/game';
+import { cartGame } from 'src/app/types/game';
 
 @Component({
   selector: 'app-cart',
@@ -11,6 +11,9 @@ export class CartComponent implements OnInit {
   user_id: string | null = localStorage.getItem('user_id');
   cartGames: cartGame[] = [];
   totalPrice: number = 0; // Initialize totalPrice
+  isShown: boolean = false;
+  isProceeded: boolean = false;
+  game_id: string = '';
   constructor(private gameService: GameService) {}
 
   ngOnInit(): void {
@@ -27,19 +30,8 @@ export class CartComponent implements OnInit {
   }
 
   onDeleteHandler(id: string) {
-    this.gameService.deleteCartGame(id, this.user_id).subscribe(() => {
-      this.gameService.getAllGamesByUser(this.user_id).subscribe(
-        (data: any) => {
-          this.cartGames = data;
-          console.log(data);
-          // Calculate total price after fetching data
-          this.calculateTotalPrice();
-        },
-        (error) => {
-          console.error('Error occurred while fetching games:', error);
-        }
-      );
-    });
+    this.isShown = true;
+    this.game_id = id;
   }
 
   calculateTotalPrice() {
@@ -47,5 +39,27 @@ export class CartComponent implements OnInit {
       (total, game) => total + game.gamePrice,
       0
     );
+  }
+  onModalClosed(event: { isShown: boolean; isProceeded: boolean }) {
+    this.isShown = event.isShown;
+    this.isProceeded = event.isProceeded;
+
+    if (this.isProceeded) {
+      this.gameService
+        .deleteCartGame(this.game_id, this.user_id)
+        .subscribe(() => {
+          this.gameService.getAllGamesByUser(this.user_id).subscribe(
+            (data: any) => {
+              this.cartGames = data;
+              console.log(data);
+              // Calculate total price after fetching data
+              this.calculateTotalPrice();
+            },
+            (error) => {
+              console.error('Error occurred while fetching games:', error);
+            }
+          );
+        });
+    }
   }
 }

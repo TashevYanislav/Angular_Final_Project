@@ -1,4 +1,7 @@
 <div class="cart">
+  <ng-container *ngIf="isShown">
+    <app-modal (modalClosed)="onModalClosed($event)" [isShown]="true"/>
+  </ng-container>
   <header>
     <h2>My Cart</h2>
   </header>
@@ -11,7 +14,10 @@
         </a>
       </div>
       <div class="info">
-        <p>{{ cartGame.gameName | slice:0:22 }}{{ cartGame.gameName.length > 22 ? '...' : '' }}</p>
+        <p>
+          {{ cartGame.gameName | slice : 0 : 22
+          }}{{ cartGame.gameName.length > 22 ? "..." : "" }}
+        </p>
         <p>Price: {{ cartGame.gamePrice }} $</p>
         <button (click)="onDeleteHandler(cartGame._id)">Delete</button>
       </div>
@@ -19,7 +25,7 @@
   </div>
   <hr />
   <div class="empty_cart" *ngIf="cartGames.length === 0">
-    <img id="noItemsImg" src="../../../assets/NoItems.png" alt="No Items Yet">
+    <img id="noItemsImg" src="../../../assets/NoItems.png" alt="No Items Yet" />
     <hr />
   </div>
   <div class="total">
