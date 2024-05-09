@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, forkJoin, of } from 'rxjs';
+import { Observable, forkJoin } from 'rxjs';
 import { cartGame, game, gameForm, like } from '../types/game';
 
 @Injectable({
@@ -207,4 +207,6 @@ export class GameService {
       `${this.URL}/games?where=game_name%20LIKE%20%22${searchParams}%22`
     );
   }
+
+  
 }

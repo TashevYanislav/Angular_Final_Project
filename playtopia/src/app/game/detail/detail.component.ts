@@ -16,7 +16,8 @@ export class DetailComponent implements OnInit {
   isBought: boolean = false;
   like_id: string | null = '';
   cartGameId: string | null = '';
-
+  isShown: boolean = false;
+  isProceeded: boolean = false;
   likesCount = 0;
 
   constructor(
@@ -104,14 +105,8 @@ export class DetailComponent implements OnInit {
     }
   }
   removeFromCartHandler() {
-    if (this.user_id) {
-      this.gameService
-        .deleteCartGame(this.cartGameId, this.user_id)
-        .subscribe((data) => {
-          this.isBought = false;
-          this.refreshCart();
-        });
-    }
+    this.isShown = true;
+    console.log(`Details Page ${this.isProceeded}`);
   }
   refreshCart() {
     this.gameService.getCartGame(this.user_id, this.id).subscribe((data) => {
@@ -122,5 +117,17 @@ export class DetailComponent implements OnInit {
         this.isBought = false;
       }
     });
+  }
+  onModalClosed(event: { isShown: boolean; isProceeded: boolean }) {
+    this.isShown = event.isShown;
+    this.isProceeded = event.isProceeded;
+    if (this.user_id && this.isProceeded) {
+      this.gameService
+        .deleteCartGame(this.cartGameId, this.user_id)
+        .subscribe(() => {
+          this.isBought = false;
+          this.refreshCart();
+        });
+    }
   }
 }
