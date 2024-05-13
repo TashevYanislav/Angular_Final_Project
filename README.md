@@ -89,14 +89,14 @@ Now you should have both the Angular app and the backend server running locally 
 
 ## Future Changes
 
-1️⃣### Add shopping items count in nav
+1️⃣ Add shopping items count in nav
 
-2️⃣### Add canActivate Auth
+2️⃣ Add canActivate Auth
 
-3️⃣### Make reload not log off the user
+3️⃣ Make reload not log off the user
 
-4️⃣### Add Comment Func 
+4️⃣ Add Comment Func 
 
-5️⃣### Add User Profile
+5️⃣ Add User Profile
 
-6️⃣### Some CSS changes to make it look better
+6️⃣ Some CSS changes to make it look better
