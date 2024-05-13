@@ -52,11 +52,7 @@ export class DetailComponent implements OnInit {
   }
 
   DeleteHandler(): void {
-    if (this.id) {
-      this.gameService.deleteGame(this.id).subscribe(() => {
-        this.router.navigate(['/store']);
-      });
-    }
+    this.isShown = true;
   }
 
   LikeHandler(): void {
@@ -105,7 +101,14 @@ export class DetailComponent implements OnInit {
     }
   }
   removeFromCartHandler() {
-    this.isShown = true;
+    if (this.user_id) {
+      this.gameService
+        .deleteCartGame(this.cartGameId, this.user_id)
+        .subscribe(() => {
+          this.isBought = false;
+          this.refreshCart();
+        });
+    }
     console.log(`Details Page ${this.isProceeded}`);
   }
   refreshCart() {
@@ -121,13 +124,10 @@ export class DetailComponent implements OnInit {
   onModalClosed(event: { isShown: boolean; isProceeded: boolean }) {
     this.isShown = event.isShown;
     this.isProceeded = event.isProceeded;
-    if (this.user_id && this.isProceeded) {
-      this.gameService
-        .deleteCartGame(this.cartGameId, this.user_id)
-        .subscribe(() => {
-          this.isBought = false;
-          this.refreshCart();
-        });
+    if (this.id && this.isProceeded) {
+      this.gameService.deleteGame(this.id).subscribe(() => {
+        this.router.navigate(['/store']);
+      });
     }
   }
 }

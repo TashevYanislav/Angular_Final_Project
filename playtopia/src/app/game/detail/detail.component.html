@@ -1,7 +1,10 @@
 <body>
   <main *ngIf="game">
     <ng-container *ngIf="isShown">
-      <app-modal (modalClosed)="onModalClosed($event)" [isShown]="true"></app-modal>
+      <app-modal
+        (modalClosed)="onModalClosed($event)"
+        [isShown]="true"
+      ></app-modal>
     </ng-container>
     <div class="image">
       <img [src]="game.game_img" [alt]="game.game_name" />
@@ -50,7 +53,7 @@
         </div>
       </div>
       <div class="buttons" *ngIf="user_id === game._ownerId">
-        <button (click)="DeleteHandler()">Delete</button>
+        <button (click)="DeleteHandler()">Remove</button>
         <button routerLink="/edit/{{ game._id }}">Edit</button>
       </div>
     </div>
