@@ -35,7 +35,7 @@ The primary goal of GameStore is to provide a practical application for applying
 ### 3. Start the Backend Server:
 1️⃣  **Open terminal.** 💻🔓  
 2️⃣  **Navigate to the Angular_Final_Project\softuni-practice-server-master.** 🚶‍♂️📁  
-3️⃣  **Run "npm i" to install packages necessary for running the server.** 🏃‍♂️⚙️  
+3️⃣  **Run "npm i", "npm run client", "npm run build", "npm start" to install packages necessary for running the server and start it.** 🏃‍♂️⚙️  
 4️⃣  **Open another terminal window.** 🔄💻  
 5️⃣  **Navigate to the `Angular_Final_Project/softuni-practice-server-master/dist` directory.** 🚶‍♂️📂  
 6️⃣  **Run the command `npm start` to start the backend server.** 🏃‍♂️🚀  
